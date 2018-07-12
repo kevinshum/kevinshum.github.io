@@ -78,3 +78,27 @@ p {
     // padding: 10%;
     // background:  rgba(255, 255, 255, 0.329);
 }
+
+
+.LinkHeader {
+    a {   text-decoration: none;  }
+    /* unvisited link */
+    a:link { color: white; }
+
+    /* visited link */
+    a:visited { color: white; }
+
+    /* mouse over link */
+    a:hover { color: rgba(0, 0, 0, 0.788);
+    font-size: 1.6em;
+margin-top: 1em;
+margin-bottom: 1em; }
+
+    /* selected link */
+    a:active { color: grey; }
+    
+    // a:hover, a:active {background: rgba(90, 172, 250, 0.514);}
+    
+    font-size: 2em;
+    color: white;
+}

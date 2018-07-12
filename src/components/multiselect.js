@@ -21,7 +21,7 @@ var MultiSelectField = createClass({
 	propTypes: {
 		label: PropTypes.string,
 	},
-	getInitialState () {
+	getInitialState() {
 		return {
 			removeSelected: true,
 			disabled: false,
@@ -31,19 +31,19 @@ var MultiSelectField = createClass({
 			rtl: false,
 		};
 	},
-	handleSelectChange (value) {
+	handleSelectChange(value) {
 		console.log('You\'ve selected:', value);
 		this.setState({ value });
 
-		render( <Card/> , document.getElementById("bio"));
+		render(<Card />, document.getElementById("bio"));
 	},
 
-	render () {
+	render() {
 		const { crazy, disabled, stayOpen, value } = this.state;
 		const options = crazy ? WHY_WOULD_YOU : FLAVOURS;
 		return (
 			<div className="section">
-				<h3 className="section-heading"> What can I show you? </h3>
+				<h3 className="section-heading">+ MORE</h3>
 				<Select
 					closeOnSelect={!stayOpen}
 					disabled={disabled}
@@ -51,7 +51,7 @@ var MultiSelectField = createClass({
 					onChange={this.handleSelectChange}
 					options={options}
 					placeholder="Click here to read my bio, check out my portfolio, or say hello!"
-          			removeSelected={this.state.removeSelected}
+					removeSelected={this.state.removeSelected}
 					rtl={this.state.rtl}
 					simpleValue
 					value={value}
