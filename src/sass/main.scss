@@ -1,0 +1,80 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  background:  url('../public/spin.gif') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#app {
+    padding: 20px;
+    margin-top: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: white;
+    height: 65vh;
+}
+#title {
+    font-size: 5em;
+}
+#select {
+
+}
+// h1 {
+//   background-color: #ecf0f1;
+//   color: #d35400;
+//   font-family: sans-serif;
+//   font-size: 16px;
+//   line-height: 1.7rem;
+//   padding: 3rem;
+// }
+
+// h2 {
+//   text-align: center;
+//   margin-top: 5rem;
+//   font-size: 6rem;
+// }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.section-heading {
+    font-size: 2rem;
+    padding-top: 3em;
+    padding-bottom: 1em;
+}
+.section {
+    width: 100%;
+    max-width: 500px;
+    font-size: 1.5em;
+
+    
+}
+.module {
+    background-color: azure;
+    // position: relative;
+    // bottom: 0px;
+    width:100%;
+    height: 1000px;
+}
+
+p {
+    font-size: 0.35em;
+
+}
+
+#container {
+    // border: 5px solid rgba(255, 255, 255, 0.329);
+    // padding: 10%;
+    // background:  rgba(255, 255, 255, 0.329);
+}
