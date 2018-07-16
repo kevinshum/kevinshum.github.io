@@ -10,9 +10,9 @@ function LinkHeader(props) {
 
 export const HomeLinkHeaders =
     <div>
-        <LinkHeader title="KEVIN SHUM"
+        {/* <LinkHeader title="KEVIN SHUM"
             link="http://mitadmissions.org/blogs/profile/kshum"
-        />
+        /> */}
         <LinkHeader title="SCHOLAR"
             link="http://mitadmissions.org/blogs/profile/kshum"
         />

@@ -6,8 +6,10 @@
   "dependencies": {
     "create-react-class": "^15.6.3",
     "react": "^16.4.1",
+    "react-css-grid": "^2.0.0-0",
     "react-dom": "^16.4.1",
-    "react-select": "^1.2.1"
+    "react-select": "^1.2.1",
+    "rebass": "^2.0.0-10"
   },
   "devDependencies": {
     "babel-preset-env": "^1.7.0",
