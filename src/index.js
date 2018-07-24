@@ -4,7 +4,8 @@ import "./sass/main.scss"
 import 'react-select/dist/react-select.css';
 import Multiselect from './components/multiselect';
 import { HomeLinkHeaders } from "./components/text";
-import Grid from 'react-css-grid';
+// import { DividerThick2 } from "./components/ui";
+// import Grid from 'react-css-grid';
 
 import { injectGlobal } from 'styled-components'
 import profile from './profile.png';
@@ -27,71 +28,173 @@ import {
 } from 'rebass'
 
 
+// #########################################################
+// COMPONENTS
+// #########################################################
+
+const DividerThick =
+    <Divider
+        w={1}
+        border={8}
+        borderColor='#3A3A3A'
+    />;
+
+const DividerThinPadded =
+    <Box mt={80}>
+        <Divider
+            w={1}
+            border={3}
+            borderColor='white'
+        />
+    </Box >;
+
+function SectionHeading(props) {
+    return <div>
+        <Divider
+            // w={1}
+            border={8}
+            borderColor='white'
+        />
+        <Text fontSize='5' color='white' fontWeight='bold'>{props.title}</Text>
+    </div>;
+}
+
+// @param: props = list of things to populate list 
+function NiceList(props) {
+    const listEntries = props.entries;
+    const listEntriesHTML = listEntries.map((entry) =>
+        <li>{entry}</li>
+    );
+    return (
+        <list>{listEntriesHTML}</list>
+    );
+}
+
+function NiceColumn(props) {
+    const columnTitle = props.title;
+    const columnEntries = props.entries;
+    return <Column>
+        <Text fontSize='2' color='white' fontWeight='bold'>{columnTitle}</Text>
+        <Box pt={25} >
+            <NiceList entries={columnEntries} />
+        </Box>
+    </Column>;
+}
+
+const scholarTableEntries = [
+    { title: "Writing", entries: ["Article1"] },
+    { title: "Papers", entries: ["Article1", "Article2"] },
+    { title: "Keynotes", entries: ["Article1"] }
+];
+
+const athleteTableEntries = [
+    { title: "Bio", entries: ["Article1"] },
+    { title: "Results", entries: ["Article1", "Article2"] },
+    { title: "Performances", entries: ["Article1"] }
+];
+
+const engineerTableEntries = [
+    { title: "Roles", entries: ["Article1"] },
+    { title: "Projects", entries: ["Article1", "Article2"] },
+    { title: "Portfolio", entries: ["Article1"] }
+];
+
+function NiceTable(props) {
+    const tableEntries = props.entries;
+    const numEntries = tableEntries.length;
+    const columnsHTML = tableEntries.map(column =>
+        <NiceColumn title={column.title} entries={column.entries} />
+    );
+    return <div>
+        {DividerThinPadded}
+        <Row >
+            {columnsHTML}
+        </Row >
+    </div>;
+}
+
+// #########################################################
+// SECTIONS
+// #########################################################
+
+// {/* --------- INTRO --------- */}
+
+const Intro =
+    <section class="intro">
+        <div class="content">
+            <bottom-right>
+                <Image src={require('./public/profile2.png')} width="400" height="500" />
+            </bottom-right>
+            <Flex mx={100} mt={200} id="z-top">
+
+                {/* vertical line
+                {DividerThick}  */}
+
+                <Box width={1 / 2} px={2} >
+                    {DividerThick}
+                    {HomeLinkHeaders}
+                </Box>
+            </Flex>
+
+        </div>
+    </section>;
+
+const scholarSectionDescription = "I'm a senior at MIT, Class of 2019, studying Computer Science and concentrating in Theater Arts. I spent Spring 2018 abroad at ETH Zürich in Switzerland, on the inaugural MIT EECS x ETH exchange program.";
+
+// TODO : fix this doesnt work 
+function NiceSectionWithTable(props) {
+    // const sectionId = props.id;
+    // const sectionDescription = props.desc;
+    // const sectionTableEntries = props.tableEntires;
+
+    const sectionId = "scholar";
+    const sectionDescription = scholarSectionDescription;
+    const sectionTableEntries = scholarTableEntries;
+    <section-flex id={sectionId}>
+        <div class="content">
+
+            <SectionHeading title={sectionId.toUpperCase()} />
+
+            <Flex flexWrap='wrap' pt={50}>
+                <Box width={[1, 2 / 3]} p={0}>
+                    <Text fontSize='2'>
+                        {sectionDescription}
+                    </Text>
+                </Box>
+
+            </Flex>
+            <NiceTable entries={sectionTableEntries} />
+        </div>
+    </section-flex >
+};
+
+// #########################################################
+// SECTIONS
+// #########################################################
+
+
 
 const App2 = props => (
-    <Provider>
-
+    <Provider theme={{
+        fonts: {
+            sans: '"Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;',
+        },
+        fontSizes: [
+            12, 16, 24, 30, 36, 50
+        ]
+    }}>
 
         <div class="center float">
             {/* <Button mt={10} children='Kevin Shum' font-size='3' lineHeight='2' /> */}
             <a href="#top"><img src={require('./public/banner.png')} width="300" /></a>
         </div>
 
-
-        {/* --------- INTRO --------- */}
-
-        <section class="intro">
-            <div class="content">
-                <bottom-right>
-                    <Image src={require('./public/profile2.png')} width="400" height="500" />
-                </bottom-right>
-                <Flex mx={100} mt={200} id="z-top">
-
-                    <Box width={1 / 2} px={2} >
-                        <Divider
-                            w={1}
-                            border={8}
-                            borderColor='#3A3A3A'
-                        />
-                        {HomeLinkHeaders}
-                    </Box>
-                    {/* <Box width={1 / 2} px={2}>
-                        <Image src={require('./public/profile.png')} width="400" height="500" />
-
-                    </Box> */}
-                </Flex>
-
-                {/* <Flex alignItems='center'>
-                    <Box width={1 / 3}>
-                        <Heading
-                            py={4}
-                            fontSize={[5, 6]}
-                            color='white'
-                            bg='blue'>
-                            Hello
-                        </Heading>
-                    </Box>
-                    <Box width={1 / 3} ml='auto'>
-                        <Text>Grid</Text>
-                    </Box>
-                </Flex> */}
-
-            </div>
-
-
-        </section>
+        {Intro}
 
         {/* --------- BIO --------- */}
         <section-flex id="bio">
             <div class="content">
-                <Divider
-                    w={1}
-                    border='3px'
-                    borderColor='white'
-                />
-
-                <Text fontSize='7' color='white' fontWeight='bold'>BIO</Text>
-
+                <SectionHeading title="BIO" />
 
                 <Flex flexWrap='wrap' pt={50}>
                     <Box width={[1, 2 / 3]} p={0}>
@@ -107,68 +210,24 @@ const App2 = props => (
         </section-flex>
 
         {/* --------- SCHOLAR --------- */}
+        {/* <NiceSectionWithTable id="scholar" desc={scholarSectionDescription} tableEntires={scholarTableEntries} /> */}
 
         <section-flex id="scholar">
             <div class="content">
-                <Divider
-                    w={1}
-                    border='3px'
-                    borderColor='white'
-                />
 
-                <Text fontSize='7' color='white' fontWeight='bold'>SCHOLAR</Text>
-
+                <SectionHeading title="SCHOLAR" />
 
                 <Flex flexWrap='wrap' pt={50}>
                     <Box width={[1, 2 / 3]} p={0}>
                         <Text fontSize='2'>
-                            As a student-athlete, scholarship comes first. I'm currently a senior at MIT, Class of 2019, studying Computer Science and concentrating in Theater Arts. I spent Spring 2018 abroad at ETH Zürich in Switzerland, on the inaugural MIT EECS x ETH exchange program.
+                            I'm a senior at MIT, Class of 2019, studying Computer Science and concentrating in Theater Arts. I spent Spring 2018 abroad at ETH Zürich in Switzerland, on the inaugural MIT EECS x ETH exchange program.
                         </Text>
                     </Box>
 
                     <Box width={[1, 1 / 3]} p={0}></Box>
                 </Flex>
 
-                <Divider
-                    pt={50}
-                    w={1}
-                    border='3px'
-                    borderColor='white'
-                />
-                <Row >
-                    <Column><Text fontSize='2' color='white' fontWeight='bold'>Writing</Text>
-                        <Box pt={10} >
-                            <list>
-                                <li></li>
-                                <li>First thing</li>
-                                <li>Second thing</li>
-                                <li>Third thing</li>
-                            </list>
-                        </Box>
-                    </Column>
-
-                    <Column><Text fontSize='2' color='white' fontWeight='bold'>Papers</Text>
-                        <Box pt={10} >
-                            <list>
-                                <li></li>
-                                <li>First thing</li>
-                                <li>Second thing</li>
-                                <li>Third thing</li>
-                            </list>
-                        </Box>
-                    </Column>
-
-                    <Column><Text fontSize='2' color='white' fontWeight='bold'>Keynotes</Text>
-                        <Box pt={10} >
-                            <list>
-                                <li></li>
-                                <li>First thing</li>
-                                <li>Second thing</li>
-                                <li>Third thing</li>
-                            </list>
-                        </Box>
-                    </Column>
-                </Row>
+                <NiceTable entries={scholarTableEntries} />
             </div>
         </section-flex >
 
@@ -176,13 +235,7 @@ const App2 = props => (
 
         <section-flex id="athlete">
             <div class="content">
-                <Divider
-                    w={1}
-                    border='3px'
-                    borderColor='white'
-                />
-
-                <Text fontSize='7' color='white' fontWeight='bold'>ATHLETE</Text>
+                <SectionHeading title="ATHLETE" />
 
 
                 <Flex flexWrap='wrap' pt={50}>
@@ -194,47 +247,7 @@ const App2 = props => (
                     <Box width={[1, 1 / 3]} p={0}></Box>
                 </Flex>
 
-                <Divider
-                    pt={50}
-                    w={1}
-                    border='3px'
-                    borderColor='white'
-                />
-
-                <Row >
-                    <Column><Text fontSize='2' color='white' fontWeight='bold'>Skating Bio</Text>
-                        <Box pt={10} >
-                            <list>
-                                <li></li>
-                                <li>First thing</li>
-                                <li>Second thing</li>
-                                <li>Third thing</li>
-                            </list>
-                        </Box>
-                    </Column>
-
-                    <Column><Text fontSize='2' color='white' fontWeight='bold'>Results</Text>
-                        <Box pt={10} >
-                            <list>
-                                <li></li>
-                                <li>First thing</li>
-                                <li>Second thing</li>
-                                <li>Third thing</li>
-                            </list>
-                        </Box>
-                    </Column>
-
-                    <Column><Text fontSize='2' color='white' fontWeight='bold'>Performances</Text>
-                        <Box pt={10} >
-                            <list>
-                                <li></li>
-                                <li>First thing</li>
-                                <li>Second thing</li>
-                                <li>Third thing</li>
-                            </list>
-                        </Box>
-                    </Column>
-                </Row>
+                <NiceTable entries={athleteTableEntries} />
 
             </div>
 
@@ -244,14 +257,7 @@ const App2 = props => (
 
         <section-flex id="engineer">
             <div class="content">
-                <Divider
-                    w={1}
-                    border='3px'
-                    borderColor='white'
-                />
-
-                <Text fontSize='7' color='white' fontWeight='bold'>ENGINEER</Text>
-
+                <SectionHeading title="ENGINEER" />
 
                 <Flex flexWrap='wrap' pt={50}>
                     <Box width={[1, 2 / 3]} p={0}>
@@ -262,48 +268,7 @@ const App2 = props => (
                     <Box width={[1, 1 / 3]} p={0}></Box>
                 </Flex>
 
-                <Divider
-                    pt={50}
-                    w={1}
-                    border='3px'
-                    borderColor='white'
-                />
-
-                <Row >
-                    <Column><Text fontSize='2' color='white' fontWeight='bold'>Skating Bio</Text>
-                        <Box pt={10} >
-                            <list>
-                                <li></li>
-                                <li>First thing</li>
-                                <li>Second thing</li>
-                                <li>Third thing</li>
-                            </list>
-                        </Box>
-                    </Column>
-
-                    <Column><Text fontSize='2' color='white' fontWeight='bold'>Results</Text>
-                        <Box pt={10} >
-                            <list>
-                                <li></li>
-                                <li>First thing</li>
-                                <li>Second thing</li>
-                                <li>Third thing</li>
-                            </list>
-                        </Box>
-                    </Column>
-
-                    <Column><Text fontSize='2' color='white' fontWeight='bold'>Performances</Text>
-                        <Box pt={10} >
-                            <list>
-                                <li></li>
-                                <li>First thing</li>
-                                <li>Second thing</li>
-                                <li>Third thing</li>
-                            </list>
-                        </Box>
-                    </Column>
-                </Row>
-
+                <NiceTable entries={engineerTableEntries} />
 
                 {/* <Text fontSize='2' color='white' fontWeight='italic'>Partners</Text> */}
 
@@ -325,7 +290,7 @@ const App2 = props => (
             <section-flex id="footer">
 
                 {/* <div class="content" id="bottom"> */}
-                <div id="top" >
+                <div id="bottom" >
 
                     <Flex
                         mx={0}
@@ -333,7 +298,7 @@ const App2 = props => (
                     >
                         <Box width={[1, 1]} mb={200}>
 
-                            <Text fontSize='5' color='white'><i>
+                            <Text fontSize='2' color='white'><i>
                                 When I step out on to the ice, it's an experience like no other.
                                     It's part art, part sport, both equally important. Every movement, breath, detail is scrutinized. The sport demands a mastery of the craft. A never-ending pursuit of delicate strength, creativity, and perfection. </i>
                             </Text>
@@ -368,32 +333,4 @@ const App2 = props => (
 
     </Provider >
 )
-
-
-const App = () => {
-    return (
-        <div id="container">
-            <h1 id="subtitle">
-                KEVIN SHUM
-            </h1>
-            <div id="title">
-                {HomeLinkHeaders}
-            </div>
-            <div id="select">
-                <Multiselect label="Multiselect" />
-            </div>
-        </div>
-    )
-};
-// render(<App />, document.getElementById("app"));
 render(<App2 />, document.getElementById("asdf"));
-
-const App3 = () => {
-    return (
-        <div className="module">
-            <div id="title">
-                <p>this is the: {value}</p>
-            </div>
-        </div>
-    )
-};
