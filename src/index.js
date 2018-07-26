@@ -255,22 +255,93 @@ const App2 = props => (
         </section-flex>
 
         {/* --------- ENGINEER --------- */}
-
+        {/* <Box
+            px={[10, 10, 10, '30em']}
+            py={[10, 10, 10, '30em']}
+            color='white'
+            bg='blue'>
+            Hello
+        </Box> */}
         <section-flex id="engineer">
             <div class="content">
                 <SectionHeading title="ENGINEER" />
 
                 <Flex flexWrap='wrap' pt={50}>
-                    <Box width={[1, 2 / 3]} p={0}>
+                    <Box width={[1, 1, 1, 2 / 3]} p={0}>
                         <Text fontSize='2'>
                             At MIT, I've been able to pursue my other passion, computer science. It all started in high school, when I learned how to program with BYOB in Joy of Computing. From there I've worked with all sorts of hardware and software systems, both front- and back-end, hardware and software, from iOS apps to IoT-connected robotic furniture, from distributed systems to multisensory architectural installations. Ultimately, I aim to become the mythic unicorn 🦄, working in both design and development.
                         </Text>
                     </Box>
-
-                    <Box width={[1, 1 / 3]} p={0}></Box>
                 </Flex>
 
-                <NiceTable entries={engineerTableEntries} />
+                {DividerThinPadded}
+                <Flex flexWrap='wrap' mx="auto" >
+                    <Box width={[1, 1, 1, 1 / 3]} pt={30} pr={[0, 0, 0, 5]}>
+                        <Text fontSize='2' color='white' fontWeight='bold'>Roles</Text>
+                        <Box pt={25} >
+                            <list>
+                                <li>
+                                    <a>Microsoft</a><br />Software Engineering Intern <br /><i>Summer 2018</i>
+                                </li>
+                                <li>
+                                    <a>MIT Media Lab</a><br />Undergraduate Researcher, Opera of the Future<br /><i>Summer & Winter 2017</i>
+                                </li>
+                            </list>
+                        </Box>
+                    </Box>
+                    <Box width={[1, 1, 1, 1 / 3]} pt={30} pr={[0, 0, 0, 5]}>
+                        <Text fontSize='2' color='white' fontWeight='bold'>Projects</Text>
+                        <Box pt={25} >
+                            <list>
+                                <li>
+                                    <a>Microsoft</a><br />Software Engineering Intern, Azure Compute — <i>Summer 2018</i>
+                                </li>
+                                <li>
+                                    <a>MIT Media Lab</a><br />Undergraduate Researcher, Opera of the Future — <i>Summer & Winter 2017</i>
+                                </li>
+                            </list>
+                        </Box>
+                    </Box>
+                    <Box width={[1, 1, 1, 1 / 3]} pt={30} pr={[0, 0, 0, 5]}>
+                        <Text fontSize='2' color='white' fontWeight='bold'>Portfolio</Text>
+                        <Box pt={25} >
+                            <list>
+                                <li>
+                                    <a>Microsoft</a><br />Software Engineering Intern<br />Summer 2018
+                                </li>
+                                <li>
+                                    <a>MIT Media Lab</a><br />Undergraduate Researcher<br />Summer & Winter 2017
+                                </li>
+                            </list>
+                        </Box>
+                    </Box>
+                </Flex>
+                <Box width={[1, 1, 1, 1 / 3]} pt={30} pr={[0, 0, 0, 5]}>
+                    <Text fontSize='2' color='white' fontWeight='bold'>Portfolio</Text>
+                    <Box pt={25} >
+                        <list>
+                            <li>
+                                <a>Microsoft —</a> <i>Summer 2018</i><br />Software Engineering Intern<br />
+                            </li>
+                            <li>
+                                <a>MIT Media Lab —</a> <i>Summer & Winter 2017</i><br />Undergraduate Researcher<br />
+                            </li>
+                        </list>
+                    </Box>
+                </Box>
+                <Box width={[1, 1, 1, 1 / 3]} pt={30} pr={[0, 0, 0, 5]}>
+                    <Text fontSize='2' color='white' fontWeight='bold'>Portfolio</Text>
+                    <Box pt={25} >
+                        <list>
+                            <li>
+                                <a>Microsoft —</a> <i>Software Engineering Intern</i><br />Summer 2018<br />
+                            </li>
+                            <li>
+                                <a>MIT Media Lab —</a> <i>Undergraduate Researcher</i><br />Summer & Winter 2017<br />
+                            </li>
+                        </list>
+                    </Box>
+                </Box>
                 {/* <Text fontSize='2' color='white' fontWeight='italic'>Partners</Text> */}
                 <Flex align="center" justify="center"><Image pt={75} src={require('./public/partners.png')} /></Flex>
 
@@ -295,6 +366,9 @@ const App2 = props => (
 
         {/* --------- FOOTER --------- */}
         <footer>
+            <a href="mailto:kshum@mit.edu?Subject=Hello%20from%20kevinshum.com" target="_top">Drop a note</a>
+            <br />
+            Follow me
             {DividerThinPadded}
             <Text fontSize='1' color='white'>© Handcrafted with ❤️by Kevin Shum, 2018.</Text>
         </footer>
