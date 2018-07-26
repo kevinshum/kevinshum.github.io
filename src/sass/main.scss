@@ -49,7 +49,6 @@ html {
     // justify-content:center;
     // align-items:center;
     margin: 0 auto;
-
 }
 
 section {
@@ -91,7 +90,7 @@ section-flex#athlete {
 section-flex#engineer {
     background-color: #DEE8F2;
 }
-section-flex#footer {
+section-flex#gif {
     height: 100vh;
     background:  url('../public/spin.gif') 50% 50% no-repeat;
     background-size: cover;
@@ -104,6 +103,15 @@ section-flex#footer {
     background-size: cover;
 }
 
+footer {
+    padding-top: 5em;
+    padding-bottom: 5em;
+    padding-left: 15%;
+    padding-right: 15%;
+    background-color: #DEE8F2;
+    height:30%;
+}
+
 #table {
     display: table-cell;
 
@@ -114,6 +122,7 @@ section-flex#footer {
     // vertical-align: top;
 
   }
+
 
 #bottom {
     // position: absolute;
