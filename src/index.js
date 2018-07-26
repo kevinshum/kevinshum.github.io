@@ -73,7 +73,8 @@ function NiceList(props) {
 function NiceColumn(props) {
     const columnTitle = props.title;
     const columnEntries = props.entries;
-    return <Column>
+    const columnWidth = props.width;
+    return <Column w={columnWidth}>
         <Text fontSize='2' color='white' fontWeight='bold'>{columnTitle}</Text>
         <Box pt={25} >
             <NiceList entries={columnEntries} />
@@ -94,7 +95,7 @@ const athleteTableEntries = [
 ];
 
 const engineerTableEntries = [
-    { title: "Roles", entries: ["Article1"] },
+    { title: "Roles", entries: [`Software Engineering Intern`, ""] },
     { title: "Projects", entries: ["Article1", "Article2"] },
     { title: "Portfolio", entries: ["Article1"] }
 ];
@@ -103,7 +104,7 @@ function NiceTable(props) {
     const tableEntries = props.entries;
     const numEntries = tableEntries.length;
     const columnsHTML = tableEntries.map(column =>
-        <NiceColumn title={column.title} entries={column.entries} />
+        <NiceColumn title={column.title} entries={column.entries} width={1 / numEntries} />
     );
     return <div>
         {DividerThinPadded}
@@ -262,74 +263,41 @@ const App2 = props => (
                 <Flex flexWrap='wrap' pt={50}>
                     <Box width={[1, 2 / 3]} p={0}>
                         <Text fontSize='2'>
-                            Since I was 6, my dream was to become a professional figure skater -- skating as fast as I can, doing the fastest spins and biggest tricks, competing and performing. 15 years later, I'm still lucky enough to pursue my greatest passion. Outside of training and competing, I also serve on the US Figure Skating Singles Committee.                        </Text>
+                            At MIT, I've been able to pursue my other passion, computer science. It all started in high school, when I learned how to program with BYOB in Joy of Computing. From there I've worked with all sorts of hardware and software systems, both front- and back-end, hardware and software, from iOS apps to IoT-connected robotic furniture, from distributed systems to multisensory architectural installations. Ultimately, I aim to become the mythic unicorn 🦄, working in both design and development.
+                        </Text>
                     </Box>
 
                     <Box width={[1, 1 / 3]} p={0}></Box>
                 </Flex>
 
                 <NiceTable entries={engineerTableEntries} />
-
                 {/* <Text fontSize='2' color='white' fontWeight='italic'>Partners</Text> */}
-
                 <Flex align="center" justify="center"><Image pt={75} src={require('./public/partners.png')} /></Flex>
 
-
-
             </div>
-
         </section-flex>
 
 
         {/* --------- OTHER --------- */}
-
+        <section-flex id="gif">
+            <div>
+                <Flex mx={0} flexWrap='wrap'>
+                    <Box width={[1, 2 / 3]} >
+                        {DividerThinPadded}
+                        <Text fontSize='2' color='white' pt={20}><i>
+                            When I step out on to the ice, it's an experience like no other.
+                                    It's part art, part sport, both equally important. Every movement, breath, detail is scrutinized. The sport demands a mastery of the craft. A never-ending pursuit of delicate strength, creativity, and perfection. </i>
+                        </Text>
+                    </Box>
+                </Flex>
+            </div>
+        </section-flex>
 
         {/* --------- FOOTER --------- */}
-
         <footer>
-            <section-flex id="footer">
-
-                {/* <div class="content" id="bottom"> */}
-                <div id="bottom" >
-
-                    <Flex
-                        mx={0}
-                        flexWrap='wrap'
-                    >
-                        <Box width={[1, 1]} mb={200}>
-
-                            <Text fontSize='2' color='white'><i>
-                                When I step out on to the ice, it's an experience like no other.
-                                    It's part art, part sport, both equally important. Every movement, breath, detail is scrutinized. The sport demands a mastery of the craft. A never-ending pursuit of delicate strength, creativity, and perfection. </i>
-                            </Text>
-
-                        </Box>
-                        <Box width={[1, 1]} p={0}>
-                            <Divider
-                                w={1}
-                                border='3px'
-                                borderColor='white'
-                            />
-                            <Text fontSize='1' color='white'>© Handcrafted with love by Kevin Shum, 2018.</Text>
-                        </Box>
-                    </Flex>
-
-                    {/* <Box pt={10} width={100} id="top">
-                        <Text fontSize='1' color='white' fontWeight='italic'><i>Made with love by Kevin, (c) 2018.</i></Text>
-
-                    </Box>
-                    <Box pt={10} id="bottom">
-
-                        <Text fontSize='1' color='white' fontWeight='bold'>Made with love by Kevin, (c) 2018.</Text>
-                    </Box>
-                    <div id="bottom"> */}
-
-
-                </div>
-
-            </section-flex>
-        </footer >
-
+            {DividerThinPadded}
+            <Text fontSize='1' color='white'>© Handcrafted with ❤️by Kevin Shum, 2018.</Text>
+        </footer>
 
     </Provider >
 )
