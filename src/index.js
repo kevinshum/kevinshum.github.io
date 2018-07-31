@@ -133,6 +133,19 @@ function NiceTable(props) {
     </div>;
 }
 
+
+const pressLinks = [
+    ["Wikipedia", "en.wikipedia.org/wiki/Kevin_Shum"],
+    ["Getty Images", "gettyimages.com/photos/kevin-shum?autocorrect=none&editorialproducts=sport&family=editorial&phrase=kevin%20shum&sort=best#license"],
+    ["International Skating Union", "isuresults.com/bios/isufs00034586"],
+    ["Diablo Magazine", "diablomag.com/January-2017/2018-Winter-Olympics-Hopeful/"],
+    ["Associated Press", "redbluffdailynews.com/2016/01/21/bay-area-teen-takes-junior-silver-at-us-figure-skating-championships/"],
+    ["Times Herald News", "timesheraldonline.com/article/zz/20150301/NEWS/150309991"],
+    ["Oakland Tribune", "eastbaytimes.com/2015/02/26/piedmont-skater-competing-in-world-junior-championship/"],
+    ["Mercury News", "mercurynews.com/2015/01/28/piedmontmontclair-around-the-horn-piedmonts-kevin-shum-shines-in-figure-skating/"],
+    ["The Tech", "thetech.com/2017/02/16/figure-skating-hosts-competition"]
+];
+
 // #########################################################
 // SECTIONS
 // #########################################################
@@ -379,14 +392,7 @@ const App2 = props => (
                                 <li>
                                     Skating Club of Boston <NiceLink title="Robert Black Memorial Award" link="scboston.org/membership-information/club-awards/club-award-the-robert-l-black-memorial-award/" />
                                 </li>
-                                <li>
-                                    <NiceLink title="Associated Press" link="redbluffdailynews.com/2016/01/21/bay-area-teen-takes-junior-silver-at-us-figure-skating-championships/" />
-
-
-                                </li>
-                                <li>
-                                    <NiceLink title="Portfolio" link="kevinshum.com/portfolio" />
-                                </li>
+                                {pressLinks.map(column => <li><NiceLink title={column[0]} link={column[1]} /></li>)}
                             </list>
                         </Box>
                     </Box>
