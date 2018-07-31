@@ -5,7 +5,7 @@ import 'react-select/dist/react-select.css';
 import Multiselect from './components/multiselect';
 import { HomeLinkHeaders } from "./components/text";
 // import { DividerThick2 } from "./components/ui";
-// import Grid from 'react-css-grid';
+import Grid from 'react-css-grid';
 
 import { injectGlobal } from 'styled-components'
 import profile from './profile.png';
@@ -59,6 +59,25 @@ function SectionHeading(props) {
     </div>;
 }
 
+function NiceButton(props) {
+    const buttonLink = props.link;
+    const buttonTitle = props.title;
+    const buttonLinkTarget = props.target;
+    return <a href={buttonLink} target={buttonLinkTarget}><button class="button" ><span>{buttonTitle}</span></button></a>;
+}
+
+const LINK_TARGET = {
+    IN_PAGE: "_top",
+    NEW_TAB: "_blank"
+}
+function NiceLink(props) {
+    const linkHref = "https://" + props.link;
+    const linkTitle = props.title;
+    const linkTarget = props.target;
+    return <a href={linkHref} target={LINK_TARGET.NEW_TAB}>{linkTitle}</a>;
+    // < a href={linkHref} target="_blank" >{linkTitle}</a >;
+
+}
 // @param: props = list of things to populate list 
 function NiceList(props) {
     const listEntries = props.entries;
@@ -187,28 +206,14 @@ const App2 = props => (
 
         <div class="center float">
             {/* <Button mt={10} children='Kevin Shum' font-size='3' lineHeight='2' /> */}
-            <a href="#top"><img src={require('./public/banner.png')} width="300" /></a>
+            {/* <NiceButton title="KEVIN SHUM " target={LINK_TARGET.IN_PAGE} link="#top" /> */}
+            <a href="#top" target={LINK_TARGET.IN_PAGE}><button class="button large" >KEVIN SHUM</button></a>
+
+            {/* <a href="#top"><img src={require('./public/banner.png')} width="300" /></a> */}
         </div>
 
         {Intro}
 
-        {/* --------- BIO --------- */}
-        <section-flex id="bio">
-            <div class="content">
-                <SectionHeading title="BIO" />
-
-                <Flex flexWrap='wrap' pt={50}>
-                    <Box width={[1, 2 / 3]} p={0}>
-                        <Text fontSize='2'>
-                            Greüzi! I'm Kevin―scholar, athlete, and engineer. For my studies, training, and work, I've had the opportunity to travel around the world, over 26 countries and counting.
-                        </Text>
-                    </Box>
-
-                    <Box width={[1, 1 / 3]} p={0}></Box>
-                </Flex>
-
-            </div>
-        </section-flex>
 
         {/* --------- SCHOLAR --------- */}
         {/* <NiceSectionWithTable id="scholar" desc={scholarSectionDescription} tableEntires={scholarTableEntries} /> */}
@@ -242,7 +247,9 @@ const App2 = props => (
                 <Flex flexWrap='wrap' pt={50}>
                     <Box width={[1, 2 / 3]} p={0}>
                         <Text fontSize='2'>
-                            Since I was 6, my dream was to become a professional figure skater -- skating as fast as I can, doing the fastest spins and biggest tricks, competing and performing. 15 years later, I'm still lucky enough to pursue my greatest passion. Outside of training and competing, I also serve on the US Figure Skating Singles Committee.                        </Text>
+                            Since I was 6, my dream was to become a professional figure skater -- skating as fast as I can, doing the fastest spins and biggest tricks, competing and performing. 15 years later, I'm still lucky enough to pursue my greatest passion while balancing a full-time workload at MIT.
+                            <br /> <br />
+                            Outside of training and competing, I also serve on the US Figure Skating Singles Committee.</Text>
                     </Box>
 
                     <Box width={[1, 1 / 3]} p={0}></Box>
@@ -276,78 +283,117 @@ const App2 = props => (
 
                 {DividerThinPadded}
                 <Flex flexWrap='wrap' mx="auto" >
-                    <Box width={[1, 1, 1, 1 / 3]} pt={30} pr={[0, 0, 0, 5]}>
+                    <Box width={[1, 1, 1, 1 / 2]} pt={30} pr={[0, 0, 0, 5]}>
                         <Text fontSize='2' color='white' fontWeight='bold'>Roles</Text>
                         <Box pt={25} >
                             <list>
-                                <li>
-                                    <a>Microsoft</a><br />Software Engineering Intern <br /><i>Summer 2018</i>
+                                <li><NiceLink title="Microsoft" link="microsoft.com" /><br />
+                                    Software Engineering Intern, Azure Compute
+                                    <br /><i>Summer 2018</i>
                                 </li>
-                                <li>
-                                    <a>MIT Media Lab</a><br />Undergraduate Researcher, Opera of the Future<br /><i>Summer & Winter 2017</i>
+                                <li><NiceLink title="MIT Media Lab" link="media.mit.edu" /><br />
+                                    Undergraduate Researcher, Opera of the Future
+                                    <br /><i>Summer & Fall 2017</i>
                                 </li>
-                            </list>
-                        </Box>
-                    </Box>
-                    <Box width={[1, 1, 1, 1 / 3]} pt={30} pr={[0, 0, 0, 5]}>
-                        <Text fontSize='2' color='white' fontWeight='bold'>Projects</Text>
-                        <Box pt={25} >
-                            <list>
-                                <li>
-                                    <a>Microsoft</a><br />Software Engineering Intern, Azure Compute — <i>Summer 2018</i>
+                                <li><NiceLink title="Priceline" link="priceline.com" /><br />
+                                    Mobile Engineering Intern, iOS
+                                    <br /><i>Winter 2017</i>
                                 </li>
-                                <li>
-                                    <a>MIT Media Lab</a><br />Undergraduate Researcher, Opera of the Future — <i>Summer & Winter 2017</i>
+                                <li><NiceLink title="Ori Systems" link="orisystems.com" /><br />
+                                    Software Engineering Intern, Generalist
+                                    <br /><i>Summer 2016</i>
                                 </li>
                             </list>
                         </Box>
                     </Box>
-                    <Box width={[1, 1, 1, 1 / 3]} pt={30} pr={[0, 0, 0, 5]}>
+                    <Box width={[1, 1, 1, 1 / 2]} pt={30} pr={[0, 0, 0, 5]}>
                         <Text fontSize='2' color='white' fontWeight='bold'>Portfolio</Text>
                         <Box pt={25} >
                             <list>
                                 <li>
-                                    <a>Microsoft</a><br />Software Engineering Intern<br />Summer 2018
+                                    I have also worked on client cases with <NiceLink title="MIT Consulting Group" link="consulting.mit.edu" /> and have collaborated with other brands, from <NiceLink title="Squarespace" link="squarespace.com" /> to <NiceLink title="Credit Suisse" link="credit-suisse.com/" /> in various design and development capacities as well.
                                 </li>
                                 <li>
-                                    <a>MIT Media Lab</a><br />Undergraduate Researcher<br />Summer & Winter 2017
+                                    <NiceLink title="Resume" link="dropbox.com/s/uiuztygpnz9vyua/Kevin_Shum_MIT_2018_Resume.pdf" />
+                                </li>
+                                <li>
+                                    <NiceLink title="Portfolio" link="kevinshum.com/portfolio" />
                                 </li>
                             </list>
                         </Box>
                     </Box>
                 </Flex>
-                <Box width={[1, 1, 1, 1 / 3]} pt={30} pr={[0, 0, 0, 5]}>
-                    <Text fontSize='2' color='white' fontWeight='bold'>Portfolio</Text>
-                    <Box pt={25} >
-                        <list>
-                            <li>
-                                <a>Microsoft —</a> <i>Summer 2018</i><br />Software Engineering Intern<br />
-                            </li>
-                            <li>
-                                <a>MIT Media Lab —</a> <i>Summer & Winter 2017</i><br />Undergraduate Researcher<br />
-                            </li>
-                        </list>
-                    </Box>
-                </Box>
-                <Box width={[1, 1, 1, 1 / 3]} pt={30} pr={[0, 0, 0, 5]}>
-                    <Text fontSize='2' color='white' fontWeight='bold'>Portfolio</Text>
-                    <Box pt={25} >
-                        <list>
-                            <li>
-                                <a>Microsoft —</a> <i>Software Engineering Intern</i><br />Summer 2018<br />
-                            </li>
-                            <li>
-                                <a>MIT Media Lab —</a> <i>Undergraduate Researcher</i><br />Summer & Winter 2017<br />
-                            </li>
-                        </list>
-                    </Box>
-                </Box>
-                {/* <Text fontSize='2' color='white' fontWeight='italic'>Partners</Text> */}
+
+
                 <Flex align="center" justify="center"><Image pt={75} src={require('./public/partners.png')} /></Flex>
+                {/* <Text fontSize='1' color='white' fontWeight='italic'>                            <br /><br /> I also have worked on client cases with <NiceLink title="MIT Consulting Group" href="consulting.mit.edu" /> and have collaborated with other brands, from <NiceLink title="Squarespace" link="squarespace.com" /> to <NiceLink title="Credit Suisse" link="credit-suisse.com/" /> in various design and development capacities as well.
+</Text> */}
 
             </div>
         </section-flex>
 
+        {/* --------- TIDBITS --------- */}
+        <section-flex id="bio">
+            <div class="content">
+                <SectionHeading title="TIDBITS" />
+
+                <Flex flexWrap='wrap' pt={50}>
+                    <Box width={[1, 2 / 3]} p={0}>
+                        <Text fontSize='2'>
+                            Outside of scholarship, athletics, and engineering, I love to travel and blog about my adventures for <NiceLink title="MIT Admissions" link="mitadmissions.org/blogs/author/kshum/archives" />. For my studies, training, and work, I've had the opportunity to explore the world, over 25 countries and counting.
+                            <br /><br />
+
+                        </Text>
+                    </Box>
+
+                    <Box width={[1, 1 / 3]} p={0}></Box>
+                </Flex>
+
+                {DividerThinPadded}
+                <Flex flexWrap='wrap' mx="auto" >
+                    <Box width={[1, 1, 1, 1 / 2]} pt={30} pr={[0, 0, 0, 5]}>
+                        <Text fontSize='2' color='white' fontWeight='bold'>Extracurricular</Text>
+                        <Box pt={25} >
+                            <list>
+                                <li>Blogger, <NiceLink title="MIT Admissions" link="mitadmissions.org/blogs/author/kshum/archives" />
+                                </li>
+                                <li>Consultant, <NiceLink title="MIT Consulting Group" link="consulting.mit.edu" />
+                                </li>
+                                <li>Former Chapter President, <NiceLink title="Beta Theta Pi" link="beta.mit.edu" />
+                                </li>
+                                <li>xFair & SpecialX Committees, <NiceLink title="TechX" link="techx.io/" />
+                                </li>
+                                <li>Counselor & Tour Guide, <NiceLink title="MIT EECS" link="eecs.mit.edu" />
+                                </li>
+
+                            </list>
+                        </Box>
+                    </Box>
+                    <Box width={[1, 1, 1, 1 / 2]} pt={30} pr={[0, 0, 0, 5]}>
+                        <Text fontSize='2' color='white' fontWeight='bold'>Media</Text>
+                        <Box pt={25} >
+                            <list>
+                                <li>
+                                    City of Piedmont & City of Oakland <NiceLink title="Kevin Shum Day" link="kevinshum.com/s/kevin-shum-day-31615" />
+                                </li>
+                                <li>
+                                    Skating Club of Boston <NiceLink title="Robert Black Memorial Award" link="scboston.org/membership-information/club-awards/club-award-the-robert-l-black-memorial-award/" />
+                                </li>
+                                <li>
+                                    <NiceLink title="Associated Press" link="redbluffdailynews.com/2016/01/21/bay-area-teen-takes-junior-silver-at-us-figure-skating-championships/" />
+
+
+                                </li>
+                                <li>
+                                    <NiceLink title="Portfolio" link="kevinshum.com/portfolio" />
+                                </li>
+                            </list>
+                        </Box>
+                    </Box>
+                </Flex>
+
+            </div>
+        </section-flex>
 
         {/* --------- OTHER --------- */}
         <section-flex id="gif">
@@ -366,9 +412,23 @@ const App2 = props => (
 
         {/* --------- FOOTER --------- */}
         <footer>
-            <a href="mailto:kshum@mit.edu?Subject=Hello%20from%20kevinshum.com" target="_top">Drop a note</a>
-            <br />
-            Follow me
+            <Flex mx={0} flexWrap='wrap'>
+
+
+
+
+                <Box width={[1, 2 / 3]} >
+                    <NiceButton title="Say Hello! 👋 " target={LINK_TARGET.IN_PAGE} link="mailto:kshum@mit.edu?Subject=Hello%20from%20kevinshum.com" />
+                </Box>
+                <Box width={[1, 2 / 3]} >
+                    <a href="http://instagram.com/kevinshum" target="_top"><button class="button" ><span>Find me on Instagram</span></button></a>
+                </Box>
+                <Box width={[1, 2 / 3]} >
+                    <a href="https://www.linkedin.com/in/mrkevinshum/" target="_top"><button class="button" ><span>Add me on LinkedIn</span></button></a>
+                </Box>
+
+            </Flex>
+
             {DividerThinPadded}
             <Text fontSize='1' color='white'>© Handcrafted with ❤️by Kevin Shum, 2018.</Text>
         </footer>
