@@ -1,9 +1,16 @@
 import React from 'react';
 import "../sass/main.scss"
 
+// function anaglyf(props) {
+//     return div class="font-effect-anaglyph" > props.text</Text ></div >;
+
+// }
+
 function LinkHeader(props) {
     return <div className="LinkHeader">
-        <a href={props.link} target="_blank"><b>{props.title}</b></a>
+
+        <a href={props.link} target="_blank" >
+            <b>{props.title}</b></a>
     </div>;
 
 }

@@ -10,6 +10,8 @@ import Grid from 'react-css-grid';
 import { injectGlobal } from 'styled-components'
 import profile from './profile.png';
 
+import vision from './public/3dvision.pdf';
+import photo from './public/profile.png';
 injectGlobal`
   * { box-sizing: border-box; }
   body { margin: 0; }
@@ -44,7 +46,7 @@ const DividerThinPadded =
         <Divider
             w={1}
             border={3}
-            borderColor='white'
+            borderColor='black'
         />
     </Box >;
 
@@ -53,9 +55,9 @@ function SectionHeading(props) {
         <Divider
             // w={1}
             border={8}
-            borderColor='white'
+            borderColor='black'
         />
-        <Text fontSize='5' color='white' fontWeight='bold'>{props.title}</Text>
+        <Text fontSize='5' color='black' fontWeight='bold'>{props.title}</Text>
     </div>;
 }
 
@@ -71,9 +73,10 @@ const LINK_TARGET = {
     NEW_TAB: "_blank"
 }
 function NiceLink(props) {
-    const linkHref = "https://" + props.link;
+    let linkHref = "https://" + props.link;
     const linkTitle = props.title;
     const linkTarget = props.target;
+    // if (!props.link.includes('.pdf')) linkHref = props.link;
     return <a href={linkHref} target={LINK_TARGET.NEW_TAB}>{linkTitle}</a>;
     // < a href={linkHref} target="_blank" >{linkTitle}</a >;
 
@@ -94,7 +97,7 @@ function NiceColumn(props) {
     const columnEntries = props.entries;
     const columnWidth = props.width;
     return <Column w={columnWidth}>
-        <Text fontSize='2' color='white' fontWeight='bold'>{columnTitle}</Text>
+        <Text fontSize='2' color='black' fontWeight='bold'>{columnTitle}</Text>
         <Box pt={25} >
             <NiceList entries={columnEntries} />
         </Box>
@@ -133,6 +136,36 @@ function NiceTable(props) {
     </div>;
 }
 
+const writingLinks = [
+    ["Skating or School?",
+        "mitadmissions.org/blogs/entry/skating-or-school"],
+    ["Around the World in 30 Days",
+        "mitadmissions.org/blogs/entry/around-the-world-in-30-days "],
+    ["RecomMITted",
+        "mitadmissions.org/blogs/entry/ring-delivery-2019 "]
+];
+
+const paperLinks = [
+    ["Global Alignment of Meshes for the Microsoft HoloLens",
+        ""],
+    ["Credit Suisse Mobile Banking: Usability Study",
+        ""],
+    ["The Hypermasculine Ideal: Rebranding and Reconstructing Male Figure Skating Identity",
+        ""],
+    ["17.28",
+        ""]
+];
+
+const keynoteLinks = [
+    ["MIT Global Teaching Labs, Germany",
+        "mitadmissions.org/blogs/entry/skating-or-school"],
+    ["Model View Controller",
+        "mitadmissions.org/blogs/entry/around-the-world-in-30-days "],
+    ["Symposium",
+        "mitadmissions.org/blogs/entry/ring-delivery-2019 "],
+    ["HCI stuff",
+        "mitadmissions.org/blogs/entry/ring-delivery-2019 "]
+];
 
 const pressLinks = [
     ["Wikipedia", "en.wikipedia.org/wiki/Kevin_Shum"],
@@ -143,7 +176,8 @@ const pressLinks = [
     ["Times Herald News", "timesheraldonline.com/article/zz/20150301/NEWS/150309991"],
     ["Oakland Tribune", "eastbaytimes.com/2015/02/26/piedmont-skater-competing-in-world-junior-championship/"],
     ["Mercury News", "mercurynews.com/2015/01/28/piedmontmontclair-around-the-horn-piedmonts-kevin-shum-shines-in-figure-skating/"],
-    ["The Tech", "thetech.com/2017/02/16/figure-skating-hosts-competition"]
+    ["The Tech", "thetech.com/2017/02/16/figure-skating-hosts-competition"],
+    ["Squarespace", "youtube.com/watch?v=9dxua41fAgo"]
 ];
 
 // #########################################################
@@ -237,16 +271,45 @@ const App2 = props => (
                 <SectionHeading title="SCHOLAR" />
 
                 <Flex flexWrap='wrap' pt={50}>
-                    <Box width={[1, 2 / 3]} p={0}>
+                    <Box width={[1, 1, 1, 2 / 3]} p={0}>
                         <Text fontSize='2'>
-                            I'm a senior at MIT, Class of 2019, studying Computer Science and concentrating in Theater Arts. I spent Spring 2018 abroad at ETH Zürich in Switzerland, on the inaugural MIT EECS x ETH exchange program.
+                            I'm a senior at <NiceLink title="MIT" link="web.mit.edu/" />, Class of 2019, studying Computer Science and concentrating in Theater Arts. I spent Spring 2018 abroad at <NiceLink title="ETH Zürich" link="ethz.ch/" /> in Switzerland, on the inaugural MIT EECS x ETH exchange program.
+
                         </Text>
                     </Box>
 
                     <Box width={[1, 1 / 3]} p={0}></Box>
                 </Flex>
 
-                <NiceTable entries={scholarTableEntries} />
+                {/* <NiceTable entries={scholarTableEntries} /> */}
+
+                {DividerThinPadded}
+                <Flex flexWrap='wrap' mx="auto" >
+                    <Box width={[1, 1, 1, 1 / 3]} pt={30} pr={[0, 0, 0, 5]}>
+                        <Text fontSize='2' color='black' fontWeight='bold'>Writing</Text>
+                        <Box pt={25} >
+                            <list>
+                                {writingLinks.map(column => <li><NiceLink title={column[0]} link={column[1]} /></li>)}
+                            </list>
+                        </Box>
+                    </Box>
+                    <Box width={[1, 1, 1, 1 / 3]} pt={30} pr={[0, 0, 0, 5]}>
+                        <Text fontSize='2' color='black' fontWeight='bold'>Papers</Text>
+                        <Box pt={25} >
+                            <list>
+                                {paperLinks.map(column => <li><NiceLink title={column[0]} link={column[1]} /></li>)}
+                            </list>
+                        </Box>
+                    </Box>
+                    <Box width={[1, 1, 1, 1 / 3]} pt={30} pr={[0, 0, 0, 5]}>
+                        <Text fontSize='2' color='black' fontWeight='bold'>Keynotes</Text>
+                        <Box pt={25} >
+                            <list>
+                                {keynoteLinks.map(column => <li><NiceLink title={column[0]} link={column[1]} /></li>)}
+                            </list>
+                        </Box>
+                    </Box>
+                </Flex>
             </div>
         </section-flex >
 
@@ -258,11 +321,13 @@ const App2 = props => (
 
 
                 <Flex flexWrap='wrap' pt={50}>
-                    <Box width={[1, 2 / 3]} p={0}>
+                    <Box width={[1, 1, 1, 2 / 3]} p={0}>
                         <Text fontSize='2'>
-                            Since I was 6, my dream was to become a professional figure skater -- skating as fast as I can, doing the fastest spins and biggest tricks, competing and performing. 15 years later, I'm still lucky enough to pursue my greatest passion while balancing a full-time workload at MIT.
+                            Since I was 6, my dream was to become a professional figure skater — skating as fast as I can, executing the fastest spins and biggest tricks, competing and performing around the world. 15 years later, I'm still lucky enough to pursue my greatest passion while balancing a full-time workload at MIT.
                             <br /> <br />
-                            Outside of training and competing, I also serve on the US Figure Skating Singles Committee.</Text>
+                            Along the way, I've competed on <NiceLink title="Team USA" link="isuresults.com/bios/isufs00034586.htm" />, traveling throughout the world on the Junior Grand Prix Circuit and even the World Junior Team. I've picked up two US junior men's silver medals and two consecutive <NiceLink title='US Collegiate Championship' link="facebook.com/153175814722275/photos/ms.c.eJwzMjAwNDI2MjAyM7UwNjYw0jOCChgaG5lYWpobAABt2waD.bps.a.1998564043516767.1073741856.153175814722275/2001232026583302/?type=3&theater" /> titles.
+                            <br /> <br />
+                            Outside of training and competing, I also serve on the <NiceLink title='US Figure Skating Singles Committee' link='usfsa.org/story?id=84020&menu=leadership' />.</Text>
                     </Box>
 
                     <Box width={[1, 1 / 3]} p={0}></Box>
@@ -297,7 +362,7 @@ const App2 = props => (
                 {DividerThinPadded}
                 <Flex flexWrap='wrap' mx="auto" >
                     <Box width={[1, 1, 1, 1 / 2]} pt={30} pr={[0, 0, 0, 5]}>
-                        <Text fontSize='2' color='white' fontWeight='bold'>Roles</Text>
+                        <Text fontSize='2' color='black' fontWeight='bold'>Roles</Text>
                         <Box pt={25} >
                             <list>
                                 <li><NiceLink title="Microsoft" link="microsoft.com" /><br />
@@ -313,19 +378,19 @@ const App2 = props => (
                                     <br /><i>Winter 2017</i>
                                 </li>
                                 <li><NiceLink title="Ori Systems" link="orisystems.com" /><br />
-                                    Software Engineering Intern, Generalist
+                                    Software Engineering Intern, Mobile
                                     <br /><i>Summer 2016</i>
                                 </li>
                             </list>
                         </Box>
                     </Box>
                     <Box width={[1, 1, 1, 1 / 2]} pt={30} pr={[0, 0, 0, 5]}>
-                        <Text fontSize='2' color='white' fontWeight='bold'>Portfolio</Text>
+                        <Text fontSize='2' color='black' fontWeight='bold'>Portfolio</Text>
                         <Box pt={25} >
                             <list>
-                                <li>
+                                {/* <li>
                                     I have also worked on client cases with <NiceLink title="MIT Consulting Group" link="consulting.mit.edu" /> and have collaborated with other brands, from <NiceLink title="Squarespace" link="squarespace.com" /> to <NiceLink title="Credit Suisse" link="credit-suisse.com/" /> in various design and development capacities as well.
-                                </li>
+                                </li> */}
                                 <li>
                                     <NiceLink title="Resume" link="dropbox.com/s/uiuztygpnz9vyua/Kevin_Shum_MIT_2018_Resume.pdf" />
                                 </li>
@@ -351,9 +416,9 @@ const App2 = props => (
                 <SectionHeading title="TIDBITS" />
 
                 <Flex flexWrap='wrap' pt={50}>
-                    <Box width={[1, 2 / 3]} p={0}>
+                    <Box width={[1, 1, 1, 2 / 3]} p={0}>
                         <Text fontSize='2'>
-                            Outside of scholarship, athletics, and engineering, I love to travel and blog about my adventures for <NiceLink title="MIT Admissions" link="mitadmissions.org/blogs/author/kshum/archives" />. For my studies, training, and work, I've had the opportunity to explore the world, over 25 countries and counting.
+                            Outside of scholarship, athletics, and engineering, I've organized a <NiceLink title="career fair" link="xfair.io" />, voted and debated legislation at a <NiceLink title="national convention" link="beta.org/programs/general-convention/" />, and <NiceLink title="taught computer science" link="misti.mit.edu/global-teaching-labs" /> at a high school in Germany. I love to travel and blog about my adventures for <NiceLink title="MIT Admissions" link="mitadmissions.org/blogs/author/kshum/archives" />. For my studies, training, and work, I've had the opportunity to explore the world, over 25 countries and counting—from Estonia to Japan, to Hong Kong to the Switzerland. Here's to more adventures to come! 🗺
                             <br /><br />
 
                         </Text>
@@ -365,12 +430,14 @@ const App2 = props => (
                 {DividerThinPadded}
                 <Flex flexWrap='wrap' mx="auto" >
                     <Box width={[1, 1, 1, 1 / 2]} pt={30} pr={[0, 0, 0, 5]}>
-                        <Text fontSize='2' color='white' fontWeight='bold'>Extracurricular</Text>
+                        <Text fontSize='2' color='black' fontWeight='bold'>Extracurricular</Text>
                         <Box pt={25} >
                             <list>
                                 <li>Blogger, <NiceLink title="MIT Admissions" link="mitadmissions.org/blogs/author/kshum/archives" />
                                 </li>
                                 <li>Consultant, <NiceLink title="MIT Consulting Group" link="consulting.mit.edu" />
+                                </li>
+                                <li>Instructor, <NiceLink title="MIT Global Teaching Labs, Germany" link="misti.mit.edu/global-teaching-labs" />
                                 </li>
                                 <li>Former Chapter President, <NiceLink title="Beta Theta Pi" link="beta.mit.edu" />
                                 </li>
@@ -383,7 +450,7 @@ const App2 = props => (
                         </Box>
                     </Box>
                     <Box width={[1, 1, 1, 1 / 2]} pt={30} pr={[0, 0, 0, 5]}>
-                        <Text fontSize='2' color='white' fontWeight='bold'>Media</Text>
+                        <Text fontSize='2' color='black' fontWeight='bold'>Media</Text>
                         <Box pt={25} >
                             <list>
                                 <li>
@@ -407,9 +474,9 @@ const App2 = props => (
                 <Flex mx={0} flexWrap='wrap'>
                     <Box width={[1, 2 / 3]} >
                         {DividerThinPadded}
-                        <Text fontSize='2' color='white' pt={20}><i>
+                        <Text fontSize='2' color='black' pt={20}><i>
                             When I step out on to the ice, it's an experience like no other.
-                                    It's part art, part sport, both equally important. Every movement, breath, detail is scrutinized. The sport demands a mastery of the craft. A never-ending pursuit of delicate strength, creativity, and perfection. </i>
+                                    It's part art, part sport. It's elegance. It's strength. Every movement, breath, detail is scrutinized. For over 15 years, I've ruthlessly pursued my passion. An obsessive, relentless pursuit of perfection. </i>
                         </Text>
                     </Box>
                 </Flex>
@@ -427,16 +494,16 @@ const App2 = props => (
                     <NiceButton title="Say Hello! 👋 " target={LINK_TARGET.IN_PAGE} link="mailto:kshum@mit.edu?Subject=Hello%20from%20kevinshum.com" />
                 </Box>
                 <Box width={[1, 2 / 3]} >
-                    <a href="http://instagram.com/kevinshum" target="_top"><button class="button" ><span>Find me on Instagram</span></button></a>
+                    <a href="http://instagram.com/kevinshum" target={LINK_TARGET.NEW_TAB}><button class="button" ><span>Find me on Instagram 📷</span></button></a>
                 </Box>
                 <Box width={[1, 2 / 3]} >
-                    <a href="https://www.linkedin.com/in/mrkevinshum/" target="_top"><button class="button" ><span>Add me on LinkedIn</span></button></a>
+                    <a href="https://www.linkedin.com/in/mrkevinshum/" target={LINK_TARGET.NEW_TAB}><button class="button" ><span>Add me on LinkedIn 💼</span></button></a>
                 </Box>
 
             </Flex>
 
             {DividerThinPadded}
-            <Text fontSize='1' color='white'>© Handcrafted with ❤️by Kevin Shum, 2018.</Text>
+            <Text fontSize='1' color='black'>© Handcrafted with ❤️in Seattle, 2018.</Text>
         </footer>
 
     </Provider >
