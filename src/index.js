@@ -34,10 +34,16 @@ import {
 // COMPONENTS
 // #########################################################
 
-const DividerThick =
+const DividerRealThick =
     <Divider
         w={1}
         border={8}
+        borderColor='#3A3A3A'
+    />;
+const DividerThick =
+    <Divider
+        w={1}
+        border={6}
         borderColor='#3A3A3A'
     />;
 
@@ -52,11 +58,7 @@ const DividerThinPadded =
 
 function SectionHeading(props) {
     return <div>
-        <Divider
-            // w={1}
-            border={8}
-            borderColor='black'
-        />
+        {DividerThick}
         <Text fontSize='5' color='black' fontWeight='bold'>{props.title}</Text>
     </div>;
 }
@@ -247,19 +249,35 @@ const App2 = props => (
             sans: '"Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;',
         },
         fontSizes: [
-            12, 16, 24, 30, 36, 50
+            10, 12, 18, 25, 30, 50
         ]
     }}>
 
-        <div class="center float">
-            {/* <Button mt={10} children='Kevin Shum' font-size='3' lineHeight='2' /> */}
-            {/* <NiceButton title="KEVIN SHUM " target={LINK_TARGET.IN_PAGE} link="#top" /> */}
-            <a href="#top" target={LINK_TARGET.IN_PAGE}><button class="button large" >KEVIN SHUM</button></a>
+        {/* <section-flex id="header" class="active" href="javascript:void(0)"> */}
+        <section-flex id="header">
+            {DividerRealThick}
+            <a href="#top" target={LINK_TARGET.IN_PAGE}><h1>KEVIN SHUM</h1></a>
+            <Flex flexWrap='wrap' pt={50}>
+                <Box width={[1, 1, 1, 2 / 3]} p={0}>
+                    <Text fontSize='2'>
+                        Born and raised in the San Francisco Bay Area, Kevin is a Senior at MIT studying Computer Science, and currently interns at Microsoft as a Software Engineer in Azure Compute.
+            </Text>
+                    <Text pt='1em' fontSize='2'>
+                        He is the two-time reigning US Collegiate Champion in figure skating, and has traveled the nation and world as a member of Team USA.
+            </Text>
+                </Box>
+            </Flex>
+        </section-flex>
 
-            {/* <a href="#top"><img src={require('./public/banner.png')} width="300" /></a> */}
-        </div>
 
-        {Intro}
+        {/* <div class="center float"> */}
+        {/* <Button mt={10} children='Kevin Shum' font-size='3' lineHeight='2' /> */}
+        {/* <NiceButton title="KEVIN SHUM " target={LINK_TARGET.IN_PAGE} link="#top" /> */}
+        {/* <a href="#top" target={LINK_TARGET.IN_PAGE}><button class="button large" >KEVIN SHUM</button></a> */}
+        {/* <a href="#top"><img src={require('./public/banner.png')} width="300" /></a> */}
+        {/* </div> */}
+
+        {/* {Intro} */}
 
 
         {/* --------- SCHOLAR --------- */}
@@ -286,7 +304,7 @@ const App2 = props => (
                 {DividerThinPadded}
                 <Flex flexWrap='wrap' mx="auto" >
                     <Box width={[1, 1, 1, 1 / 3]} pt={30} pr={[0, 0, 0, 5]}>
-                        <Text fontSize='2' color='black' fontWeight='bold'>Writing</Text>
+                        <Text fontSize='3' color='black' fontWeight='bold'>Writing</Text>
                         <Box pt={25} >
                             <list>
                                 {writingLinks.map(column => <li><NiceLink title={column[0]} link={column[1]} /></li>)}
@@ -294,7 +312,7 @@ const App2 = props => (
                         </Box>
                     </Box>
                     <Box width={[1, 1, 1, 1 / 3]} pt={30} pr={[0, 0, 0, 5]}>
-                        <Text fontSize='2' color='black' fontWeight='bold'>Papers</Text>
+                        <Text fontSize='3' color='black' fontWeight='bold'>Papers</Text>
                         <Box pt={25} >
                             <list>
                                 {paperLinks.map(column => <li><NiceLink title={column[0]} link={column[1]} /></li>)}
@@ -302,7 +320,7 @@ const App2 = props => (
                         </Box>
                     </Box>
                     <Box width={[1, 1, 1, 1 / 3]} pt={30} pr={[0, 0, 0, 5]}>
-                        <Text fontSize='2' color='black' fontWeight='bold'>Keynotes</Text>
+                        <Text fontSize='3' color='black' fontWeight='bold'>Keynotes</Text>
                         <Box pt={25} >
                             <list>
                                 {keynoteLinks.map(column => <li><NiceLink title={column[0]} link={column[1]} /></li>)}
@@ -362,7 +380,7 @@ const App2 = props => (
                 {DividerThinPadded}
                 <Flex flexWrap='wrap' mx="auto" >
                     <Box width={[1, 1, 1, 1 / 2]} pt={30} pr={[0, 0, 0, 5]}>
-                        <Text fontSize='2' color='black' fontWeight='bold'>Roles</Text>
+                        <Text fontSize='3' color='black' fontWeight='bold'>Roles</Text>
                         <Box pt={25} >
                             <list>
                                 <li><NiceLink title="Microsoft" link="microsoft.com" /><br />
@@ -385,7 +403,7 @@ const App2 = props => (
                         </Box>
                     </Box>
                     <Box width={[1, 1, 1, 1 / 2]} pt={30} pr={[0, 0, 0, 5]}>
-                        <Text fontSize='2' color='black' fontWeight='bold'>Portfolio</Text>
+                        <Text fontSize='3' color='black' fontWeight='bold'>Portfolio</Text>
                         <Box pt={25} >
                             <list>
                                 {/* <li>

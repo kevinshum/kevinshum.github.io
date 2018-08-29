@@ -26,6 +26,12 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+//   background-color: $pastel-gray;
+//   background: linear-gradient(#0000, #1111);
+// background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);//   background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+// background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+//  background-blend-mode: multiply;
+    background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
 .topnav {
@@ -72,35 +78,44 @@ section-flex {
     display: table;
     margin: 0;
     max-width: none;
-    padding-top: 12%;
-    padding-bottom: 25%;
+    padding-top: 10%;
+    padding-bottom: 10%;
     padding-left: 15%;
     padding-right: 15%;
     height: auto;
 }
 
 @media (max-width: 750px) {
-    section-flex {
+    section-flex  {
         padding-left: 5%;
         padding-right: 5%;
+        padding-top: 8%;
+        padding-bottom: 8%;
     }
 }
-  
-section-flex#bio {
-    background-color: #D8D8D8;
-}
 
-section-flex#scholar {
-    background-color: #F2EDDE;
+section-flex#header {
+    // background-color: $pastel-gray;
+    padding-top:3em;
+    padding-bottom:3em;
+    z-index:100;
 }
+// section-flex#bio {
+//     background-color: #D8D8D8;
+// }
 
-section-flex#athlete {
-    background-color: #C6D7CF;
-}
+// section-flex#scholar {
+//     // margin-top: 10em;
+//     background-color: #F2EDDE;
+// }
 
-section-flex#engineer {
-    background-color: #DEE8F2;
-}
+// section-flex#athlete {
+//     background-color: #C6D7CF;
+// }
+
+// section-flex#engineer {
+//     background-color: #DEE8F2;
+// }
 section-flex#gif {
     height: 100vh;
     background:  url('../public/spin.gif') 50% 50% no-repeat;
@@ -119,7 +134,7 @@ footer {
     padding-bottom: 5em;
     padding-left: 15%;
     padding-right: 15%;
-    background-color: #DEE8F2;
+    // background-color: #DEE8F2;
     height:30%;
 }
 
@@ -280,6 +295,21 @@ body {
     // background:  rgba(255, 255, 255, 0.329);
 }
 
+.header{
+    height: 10%;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    padding-top: 1em;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
 
 .LinkHeader {
     font-size: 6em;
@@ -321,15 +351,15 @@ list {
 
 .float{
     position: fixed;
-    left: 50%;
-    // bottom: 20px;
-    transform: translate(-50%, 0);
-    margin: 0 auto;
+    // left: 50%;
+    // // bottom: 20px;
+    // transform: translate(-50%, 0);
+    // margin: 0 auto;
 
 	position:fixed;
 	// width:60px;
 	// height:60px;
-    top:3.5em;
+    // top:3.5em;
 
     // margin: 0 auto;
 
