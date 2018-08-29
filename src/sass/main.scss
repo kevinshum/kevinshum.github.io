@@ -78,6 +78,13 @@ section-flex {
     padding-right: 15%;
     height: auto;
 }
+
+@media (max-width: 750px) {
+    section-flex {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
   
 section-flex#bio {
     background-color: #D8D8D8;
