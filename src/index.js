@@ -150,11 +150,11 @@ const writingLinks = [
 const paperLinks = [
     ["Global Alignment of Meshes for the Microsoft HoloLens",
         ""],
-    ["Credit Suisse Mobile Banking: Usability Study",
+    ["Mobile Banking Usability Study",
         ""],
     ["The Hypermasculine Ideal: Rebranding and Reconstructing Male Figure Skating Identity",
         ""],
-    ["17.28",
+    ["A Comparative Study of Eisenhower’s Cold War and Bush’s War on Terror Rhetoric",
         ""]
 ];
 
@@ -182,6 +182,38 @@ const pressLinks = [
     ["Squarespace", "youtube.com/watch?v=9dxua41fAgo"]
 ];
 
+const skatingBioLinks = [["International Skating Union", "isuresults.com/bios/isufs00034586.htm"]];
+
+const skatingResultsLinks = [
+    ["2018 Collegiate Championships — 1st", "facebook.com/153175814722275/photos/ms.c.eJwzMjAwNDI2MjAyM7UwNjYw0jOCChgaG5lYWpobAABt2waD.bps.a.1998564043516767/2001232026583302/?type=3&theater"],
+    ["2017 Collegiate Championships — 1st", "facebook.com/153175814722275/photos/a.383980671641787/1950514051655100/?type=3&theater"],
+    ["2016 US Championships, Junior — 2nd", "isuresults.com/bios/isufs00034586.htm"],
+    ["2015 US Championships, Junior — 2nd", "isuresults.com/bios/isufs00034586.htm"],
+    ["2015 World Junior Championships — 20th", "isuresults.com/bios/isufs00034586.htm"],
+    ["2016 Junior Grand Prix, Ostrava — 7th", "isuresults.com/bios/isufs00034586.htm"],
+    ["2015 Junior Grand Prix, Bratislava — 9th", "isuresults.com/bios/isufs00034586.htm"],
+    ["2014 Junior Grand Prix, Nagoya — 7th", "isuresults.com/bios/isufs00034586.htm"],
+];
+
+const skatingPerformancesLinks = [
+    ["2016-2017", "Skating Club at Dartmouth Skating Spectacular", "to support Skating Club at Dartmouth and Children's Hospital at Dartmouth"],
+    ["2015-2018", "An Evening with Champions", "organized by Harvard University to support the Jimmy Fund and Dana-Farber Cancer Institute"],
+    ["2015-2017", "MIT Winter Exhibition", " "],
+    ["2016", "Skating Stars of the Future at Rockefeller Center", " "],
+    ["2016", "Skating Club of Boston: Ice Chips", " "]
+]
+
+const engineeringProjectLinks = [
+    ["Microsoft Hackathon: OneBoarding", ""],
+    ["ETH Zürich Human-Computer Interaction: Usability Study", ""],
+    ["ETH Zürich 3D Vision: Global Alignment of Meshes for the Microsoft Hololens", ""],
+    ["MIT Media Lab: Spaces that Perform Themselves", "kevinshum.com/portfolio/#opera"],
+    ["Interconnected Embedded Systems - BitHunt", ""],
+    ["Sports Technology - Machine Learning on Sports Analytics Data", ""],
+    ["Digital & Computational Photography - Painterly Rendering", ""],
+    ["Resume", "dropbox.com/s/uiuztygpnz9vyua/Kevin_Shum_MIT_2018_Resume.pdf"],
+    ["Portfolio", "kevinshum.com/portfolio"]
+];
 // #########################################################
 // SECTIONS
 // #########################################################
@@ -254,16 +286,37 @@ const App2 = props => (
     }}>
 
         {/* <section-flex id="header" class="active" href="javascript:void(0)"> */}
-        <section-flex id="header">
+        <section-flex id="header" justify-content="space-between">
+            <Box pt="8%" />
+
             {DividerRealThick}
-            <a href="#top" target={LINK_TARGET.IN_PAGE}><h1>KEVIN SHUM</h1></a>
+            <Flex justifyContent="space-between" flexWrap='wrap' mx="auto">
+                <Box pr={[0, 0, 0, 5]}>
+                    <a href="#top" target={LINK_TARGET.IN_PAGE}><h1>KEVIN SHUM</h1></a>
+                </Box>
+                <Box pt={1} pr={[0, 0, 0, 0]}>
+                    MIT Engineer<br />
+                    Collegiate Champion <br />
+                    Unicorn <br />
+                    Tidbits <br />
+
+                    {/* MIT Engineer /
+                    Collegiate Champion
+                    / Unicorn /
+                    Tidbits <br /> */}
+                </Box>
+            </Flex>
+
+            <Box pt="5%" />
+
+
             <Flex flexWrap='wrap' pt={50}>
                 <Box width={[1, 1, 1, 2 / 3]} p={0}>
                     <Text fontSize='2'>
-                        Born and raised in the San Francisco Bay Area, Kevin is a Senior at MIT studying Computer Science, and currently interns at Microsoft as a Software Engineer in Azure Compute.
+                        Born and raised in the San Francisco Bay Area, Kevin revises Computer Science at MIT as a Fourth-Year student, Class of 2019. He currently interns at Microsoft as a Software Engineer in Azure Compute.
             </Text>
                     <Text pt='1em' fontSize='2'>
-                        He is the two-time reigning US Collegiate Champion in figure skating, and has traveled the nation and world as a member of Team USA.
+                        He is the two-time reigning US Collegiate Champion in figure skating, and has traveled the nation and world as a member of Team USA. 🇺🇸
             </Text>
                 </Box>
             </Flex>
@@ -286,12 +339,12 @@ const App2 = props => (
         <section-flex id="scholar">
             <div class="content">
 
-                <SectionHeading title="SCHOLAR" />
+                <SectionHeading title="MIT ENGINEER" />
 
                 <Flex flexWrap='wrap' pt={50}>
                     <Box width={[1, 1, 1, 2 / 3]} p={0}>
                         <Text fontSize='2'>
-                            I'm a senior at <NiceLink title="MIT" link="web.mit.edu/" />, Class of 2019, studying Computer Science and concentrating in Theater Arts. I spent Spring 2018 abroad at <NiceLink title="ETH Zürich" link="ethz.ch/" /> in Switzerland, on the inaugural MIT EECS x ETH exchange program.
+                            I'm a senior at <NiceLink title="MIT" link="web.mit.edu/" />, Class of 2019, studying Computer Science and concentrating in Theater Arts. I spent Spring 2018 abroad at <NiceLink title="ETH Zürich" link="ethz.ch/" /> in Switzerland, on the inaugural MIT EECS x ETH exchange program. 📚
 
                         </Text>
                     </Box>
@@ -335,7 +388,7 @@ const App2 = props => (
 
         <section-flex id="athlete">
             <div class="content">
-                <SectionHeading title="ATHLETE" />
+                <SectionHeading title="COLLEGIATE CHAMPION" />
 
 
                 <Flex flexWrap='wrap' pt={50}>
@@ -345,14 +398,40 @@ const App2 = props => (
                             <br /> <br />
                             Along the way, I've competed on <NiceLink title="Team USA" link="isuresults.com/bios/isufs00034586.htm" />, traveling throughout the world on the Junior Grand Prix Circuit and even the World Junior Team. I've picked up two US junior men's silver medals and two consecutive <NiceLink title='US Collegiate Championship' link="facebook.com/153175814722275/photos/ms.c.eJwzMjAwNDI2MjAyM7UwNjYw0jOCChgaG5lYWpobAABt2waD.bps.a.1998564043516767.1073741856.153175814722275/2001232026583302/?type=3&theater" /> titles.
                             <br /> <br />
-                            Outside of training and competing, I also serve on the <NiceLink title='US Figure Skating Singles Committee' link='usfsa.org/story?id=84020&menu=leadership' />.</Text>
+                            Outside of training and competing, I also serve on the <NiceLink title='US Figure Skating Singles Committee' link='usfsa.org/story?id=84020&menu=leadership' />.  ⛸</Text>
                     </Box>
 
                     <Box width={[1, 1 / 3]} p={0}></Box>
                 </Flex>
 
-                <NiceTable entries={athleteTableEntries} />
-
+                {/* <NiceTable entries={athleteTableEntries} /> */}
+                {DividerThinPadded}
+                <Flex flexWrap='wrap' mx="auto" >
+                    <Box width={[1, 1, 1, 1 / 3]} pt={30} pr={[0, 0, 0, 5]}>
+                        <Text fontSize='3' color='black' fontWeight='bold'>Writing</Text>
+                        <Box pt={25} >
+                            <list>
+                                {skatingBioLinks.map(column => <li><NiceLink title={column[0]} link={column[1]} /></li>)}
+                            </list>
+                        </Box>
+                    </Box>
+                    <Box width={[1, 1, 1, 1 / 3]} pt={30} pr={[0, 0, 0, 5]}>
+                        <Text fontSize='3' color='black' fontWeight='bold'>Results</Text>
+                        <Box pt={25} >
+                            <list>
+                                {skatingResultsLinks.map(column => <li><NiceLink title={column[0]} link={column[1]} /></li>)}
+                            </list>
+                        </Box>
+                    </Box>
+                    <Box width={[1, 1, 1, 1 / 3]} pt={30} pr={[0, 0, 0, 5]}>
+                        <Text fontSize='3' color='black' fontWeight='bold'>Charity</Text>
+                        <Box pt={25} >
+                            <list>
+                                {skatingPerformancesLinks.map(column => <li><NiceLink title={column[0] + " " + column[1]} link={""} /> {column[2]}</li>)}
+                            </list>
+                        </Box>
+                    </Box>
+                </Flex>
             </div>
 
         </section-flex>
@@ -367,12 +446,12 @@ const App2 = props => (
         </Box> */}
         <section-flex id="engineer">
             <div class="content">
-                <SectionHeading title="ENGINEER" />
+                <SectionHeading title="UNICORN" />
 
                 <Flex flexWrap='wrap' pt={50}>
                     <Box width={[1, 1, 1, 2 / 3]} p={0}>
                         <Text fontSize='2'>
-                            At MIT, I've been able to pursue my other passion, computer science. It all started in high school, when I learned how to program with BYOB in Joy of Computing. From there I've worked with all sorts of hardware and software systems, both front- and back-end, hardware and software, from iOS apps to IoT-connected robotic furniture, from distributed systems to multisensory architectural installations. Ultimately, I aim to become the mythic unicorn 🦄, working in both design and development.
+                            At MIT, I've been able to pursue my other passion, computer science. It all started in high school, when I learned how to program with BYOB in Joy of Computing. From there I've worked with all sorts of hardware and software systems, both front- and back-end, hardware and software, from iOS apps to IoT-connected robotic furniture, from distributed systems to multisensory architectural installations. Ultimately, I aim to become the <i>mythic unicorn</i>, working in both design and development. 🦄
                         </Text>
                     </Box>
                 </Flex>
@@ -405,23 +484,16 @@ const App2 = props => (
                     <Box width={[1, 1, 1, 1 / 2]} pt={30} pr={[0, 0, 0, 5]}>
                         <Text fontSize='3' color='black' fontWeight='bold'>Portfolio</Text>
                         <Box pt={25} >
+
                             <list>
-                                {/* <li>
-                                    I have also worked on client cases with <NiceLink title="MIT Consulting Group" link="consulting.mit.edu" /> and have collaborated with other brands, from <NiceLink title="Squarespace" link="squarespace.com" /> to <NiceLink title="Credit Suisse" link="credit-suisse.com/" /> in various design and development capacities as well.
-                                </li> */}
-                                <li>
-                                    <NiceLink title="Resume" link="dropbox.com/s/uiuztygpnz9vyua/Kevin_Shum_MIT_2018_Resume.pdf" />
-                                </li>
-                                <li>
-                                    <NiceLink title="Portfolio" link="kevinshum.com/portfolio" />
-                                </li>
+                                {engineeringProjectLinks.map(column => <li><NiceLink title={column[0]} link={column[1]} /></li>)}
                             </list>
                         </Box>
                     </Box>
                 </Flex>
 
 
-                <Flex align="center" justify="center"><Image pt={75} src={require('./public/partners.png')} /></Flex>
+                <Flex align="center" justify="center"><Image pt="7em" src={require('./public/partners.png')} /></Flex>
                 {/* <Text fontSize='1' color='white' fontWeight='italic'>                            <br /><br /> I also have worked on client cases with <NiceLink title="MIT Consulting Group" href="consulting.mit.edu" /> and have collaborated with other brands, from <NiceLink title="Squarespace" link="squarespace.com" /> to <NiceLink title="Credit Suisse" link="credit-suisse.com/" /> in various design and development capacities as well.
 </Text> */}
 
@@ -436,13 +508,13 @@ const App2 = props => (
                 <Flex flexWrap='wrap' pt={50}>
                     <Box width={[1, 1, 1, 2 / 3]} p={0}>
                         <Text fontSize='2'>
-                            Outside of scholarship, athletics, and engineering, I've organized a <NiceLink title="career fair" link="xfair.io" />, voted and debated legislation at a <NiceLink title="national convention" link="beta.org/programs/general-convention/" />, and <NiceLink title="taught computer science" link="misti.mit.edu/global-teaching-labs" /> at a high school in Germany. I love to travel and blog about my adventures for <NiceLink title="MIT Admissions" link="mitadmissions.org/blogs/author/kshum/archives" />. For my studies, training, and work, I've had the opportunity to explore the world, over 25 countries and counting—from Estonia to Japan, to Hong Kong to the Switzerland. Here's to more adventures to come! 🗺
+                            Outside of scholarship, athletics, and engineering, I've been featured in a world-wide <NiceLink title="ad campaign" link="kevinshum.com/portfolio/#you-should-squarespace" />, been celebrated with my own <NiceLink title="day" link="kevinshum.com/s/kevin-shum-day-31615day" />,, organized a <NiceLink title="career fair" link="xfair.io" />, voted and debated legislation at a <NiceLink title="national convention" link="beta.org/programs/general-convention/" />, worked in a <NiceLink title="law firm" link="sinclairlawoffice.com" />, led tours of my <NiceLink title="department" link="eecs.mit.edu" /> and a <NiceLink title="pre-orientation program" link="eecs.mit.edu/outreach/discover-ee" />,  and <NiceLink title="taught computer science" link="misti.mit.edu/global-teaching-labs" /> at a high school in Germany. I love to travel and blog about my adventures for <NiceLink title="MIT Admissions" link="mitadmissions.org/blogs/author/kshum/archives" />.
                             <br /><br />
+                            For my studies, training, and work, I've had the opportunity to explore the world, over 25 countries and counting—from Estonia to Japan, to Hong Kong to the Switzerland. Here's to more adventures to come! 🗺
+                            <br />
 
                         </Text>
                     </Box>
-
-                    <Box width={[1, 1 / 3]} p={0}></Box>
                 </Flex>
 
                 {DividerThinPadded}
@@ -492,9 +564,20 @@ const App2 = props => (
                 <Flex mx={0} flexWrap='wrap'>
                     <Box width={[1, 2 / 3]} >
                         {DividerThinPadded}
-                        <Text fontSize='2' color='black' pt={20}><i>
-                            When I step out on to the ice, it's an experience like no other.
-                                    It's part art, part sport. It's elegance. It's strength. Every movement, breath, detail is scrutinized. For over 15 years, I've ruthlessly pursued my passion. An obsessive, relentless pursuit of perfection. </i>
+                        <Text fontSize='2' color='black' pt={20}>
+                            <i>
+                                When I step out on to the ice, it's an experience like no other. It's part art, part sport. It's elegance. It's strength. It's expressing yourself, stretching your creativity. It's spinning faster, jumping higher, skating stronger. Blades against ice, it's a taste of freedom. For over 15 years, I've relentlessly pursued my passion. It's brought me the greatest joys, the greatest sorrows. I've met the most incredible people, traveling across the country and world. Skating has been everything to me.
+                            </i>
+                        </Text>
+                        <Text fontSize='2' color='black' pt={20}>
+                            <i>
+
+                            </i>
+                        </Text>
+                        <Text fontSize='2' color='black' pt={20}>
+                            <i>
+
+                            </i>
                         </Text>
                     </Box>
                 </Flex>
@@ -521,7 +604,7 @@ const App2 = props => (
             </Flex>
 
             {DividerThinPadded}
-            <Text fontSize='1' color='black'>© Handcrafted with ❤️in Seattle, 2018.</Text>
+            <Text fontSize='2' color='black'>© Handcrafted with ❤️in Seattle, 2018.</Text>
         </footer>
 
     </Provider >
