@@ -149,13 +149,13 @@ const writingLinks = [
 
 const paperLinks = [
     ["Global Alignment of Meshes for the Microsoft HoloLens",
-        ""],
+        "", ""],
     ["Mobile Banking Usability Study",
-        ""],
+        "", "Mobile apps have increasingly become the preferred method of banking, as clients are able to access their accounts and conduct transactions at their convenience, anytime and anywhere. Due to the widening scope and adoption of mobile banking, the usability of such interfaces becomes increasingly important as a focus of study and directly impacts the user experience of clients across all demographics. With the oppor- tunity to test the latest XXX iOS mobile banking app prototype, we focus on usability of the user interface and the payments workflow. We seek to uncover possible usability issues and discover new ways to improve payments on the mobile platform from an international point of view. For the study, we tested the prototype with thirteen participants spanning relationship managers and multinational university students. Our findings suggest that simplicity, efficiency, and contextual convenience are of the highest priority when designing banking experiences on the mobile platform. We conclude with recommendations for the final design of the interface and underscore the importance of aligning the feature set to the purpose of mobile banking, error prevention, and educating the users on new design and functionality."],
     ["The Hypermasculine Ideal: Rebranding and Reconstructing Male Figure Skating Identity",
-        ""],
+        "", ""],
     ["A Comparative Study of Eisenhower’s Cold War and Bush’s War on Terror Rhetoric",
-        ""]
+        "", ""]
 ];
 
 const keynoteLinks = [
@@ -289,7 +289,7 @@ const App2 = props => (
         <section-flex id="header" justify-content="space-between">
             <Box pt="8%" />
 
-            {DividerRealThick}
+            {/* {DividerRealThick} */}
             <Flex justifyContent="space-between" flexWrap='wrap' mx="auto">
                 <Box pr={[0, 0, 0, 5]}>
                     <a href="#top" target={LINK_TARGET.IN_PAGE}><h1>KEVIN SHUM</h1></a>
@@ -313,10 +313,10 @@ const App2 = props => (
             <Flex flexWrap='wrap' pt={50}>
                 <Box width={[1, 1, 1, 2 / 3]} p={0}>
                     <Text fontSize='2'>
-                        Born and raised in the San Francisco Bay Area, Kevin revises Computer Science at MIT as a Fourth-Year student, Class of 2019. He currently interns at Microsoft as a Software Engineer in Azure Compute.
+                        Born and raised in the San Francisco Bay Area, Kevin revises Computer Science at MIT, Class of 2019. This past summer, he worked at Microsoft as a Software Engineer Intern in Azure Compute.
             </Text>
                     <Text pt='1em' fontSize='2'>
-                        He is the two-time reigning US Collegiate Champion in figure skating, and has traveled the nation and world as a member of Team USA. 🇺🇸
+                        Kevin is the two-time reigning US Collegiate Champion in figure skating, and has traveled the nation and world as a member of Team USA. 🇺🇸
             </Text>
                 </Box>
             </Flex>
@@ -339,7 +339,7 @@ const App2 = props => (
         <section-flex id="scholar">
             <div class="content">
 
-                <SectionHeading title="MIT ENGINEER" />
+                <SectionHeading title="MIT COMPUTER SCIENCE" />
 
                 <Flex flexWrap='wrap' pt={50}>
                     <Box width={[1, 1, 1, 2 / 3]} p={0}>
@@ -368,7 +368,7 @@ const App2 = props => (
                         <Text fontSize='3' color='black' fontWeight='bold'>Papers</Text>
                         <Box pt={25} >
                             <list>
-                                {paperLinks.map(column => <li><NiceLink title={column[0]} link={column[1]} /></li>)}
+                                {paperLinks.map(column => <li><NiceLink title={column[0]} link={column[1]} /> <i>{column[2]}</i></li>)}
                             </list>
                         </Box>
                     </Box>
@@ -408,7 +408,7 @@ const App2 = props => (
                 {DividerThinPadded}
                 <Flex flexWrap='wrap' mx="auto" >
                     <Box width={[1, 1, 1, 1 / 3]} pt={30} pr={[0, 0, 0, 5]}>
-                        <Text fontSize='3' color='black' fontWeight='bold'>Writing</Text>
+                        <Text fontSize='3' color='black' fontWeight='bold'>Performances</Text>
                         <Box pt={25} >
                             <list>
                                 {skatingBioLinks.map(column => <li><NiceLink title={column[0]} link={column[1]} /></li>)}
@@ -544,10 +544,10 @@ const App2 = props => (
                         <Box pt={25} >
                             <list>
                                 <li>
-                                    City of Piedmont & City of Oakland <NiceLink title="Kevin Shum Day" link="kevinshum.com/s/kevin-shum-day-31615" />
+                                    <NiceLink title="Kevin Shum Day" link="kevinshum.com/s/kevin-shum-day-31615" />, 16 March 2015, City of Piedmont
                                 </li>
                                 <li>
-                                    Skating Club of Boston <NiceLink title="Robert Black Memorial Award" link="scboston.org/membership-information/club-awards/club-award-the-robert-l-black-memorial-award/" />
+                                    <NiceLink title="Skating Club of Boston" link="scboston.org/membership-information/club-awards/club-award-the-robert-l-black-memorial-award/" />
                                 </li>
                                 {pressLinks.map(column => <li><NiceLink title={column[0]} link={column[1]} /></li>)}
                             </list>
