@@ -4,6 +4,7 @@ $pastel-dark-gray: #3A3A3A;
 $pastel-yellow: #F2EDDE;
 $pastel-green: #C6D7CF;
 $pastel-blue: #DEE8F2;
+$nice-green: #8bccc5;
 
 $main-sans: 'Rubik';
 $weight-bold: 700;
@@ -231,7 +232,7 @@ footer {
     
     &:hover{ 
       opacity: 0.8;
-      color: #8bccc5;
+      color: $nice-green;
     }
     
     &:active {
