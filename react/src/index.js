@@ -2,16 +2,18 @@ import React from "react";
 import { render } from "react-dom";
 import "./sass/main.scss"
 import 'react-select/dist/react-select.css';
-import Multiselect from './components/multiselect';
+// import Multiselect from './components/multiselect';
 import { HomeLinkHeaders } from "./components/text";
 // import { DividerThick2 } from "./components/ui";
-import Grid from 'react-css-grid';
+// import Grid from 'react-css-grid';
 
 import { injectGlobal } from 'styled-components'
-import profile from './profile.png';
+// import profile from './profile.png';
+// import hover from './public/hover.jpg';
+import spin from './public/spin.jpg';
 
-import vision from './public/3dvision.pdf';
-import photo from './public/profile.png';
+// import vision from './public/3dvision.pdf';
+// import photo from './public/profile.png';
 injectGlobal`
   * { box-sizing: border-box; }
   body { margin: 0; }
@@ -20,7 +22,7 @@ injectGlobal`
 import {
     Provider, Heading, Flex, Text, Relative, Absolute,
     Card,
-    Box,
+    Box, Link,
     BackgroundImage,
     Subhead,
     Small, Image,
@@ -75,10 +77,37 @@ const DividerThinPadded =
         />
     </Box >;
 
+var sectionMappings = {
+    top: { 
+        name : "top",
+        link : "#top",
+    },
+    unicorn: {
+        name : "Unicorn! 🦄",
+        link : "#unicorn",
+    },
+    athlete: {
+        name:  "Pro Athlete ⛸",
+        link: "#athlete",
+    },
+    globetrotter: {
+        name: "Globetrotter 🗺",
+        link: "#globetrotter",
+    },
+    footer : {
+        name: "footer",
+        link: "#footer",
+    }
+};
+
 function SectionHeading(props) {
+    console.log(props.title);
+    console.log(props.title.name + " " +  + "Asdfasdfasdf");
+    const sectionName = props.title.name;
+    const link = props.title.link;
     return <div>
         {DividerThick}
-        <Text fontSize='5' color='black' fontWeight='bold'>{props.title}</Text>
+        <Text fontSize='5' color='black' fontWeight='bold'><a href={link} target={LINK_TARGET.IN_PAGE}>{sectionName}</a></Text>
     </div>;
 }
 
@@ -87,16 +116,19 @@ function NiceButton(props) {
     const buttonTitle = props.title;
     const buttonLinkTarget = props.target;
     return <a href={buttonLink} target={buttonLinkTarget}><button class="button" ><span>{buttonTitle}</span></button></a>;
-}
+};
 
 const LINK_TARGET = {
     IN_PAGE: "_top",
     NEW_TAB: "_blank"
-}
+};
 function NiceLink(props) {
     let linkHref = "https://" + props.link;
     const linkTitle = props.title;
     const linkTarget = props.target;
+    if (props.color) {
+        return <a href={linkHref} target={LINK_TARGET.NEW_TAB}><Text color={props.color}>{linkTitle}</Text></a>;
+    }
     // if (!props.link.includes('.pdf')) linkHref = props.link;
     return <a href={linkHref} target={LINK_TARGET.NEW_TAB}>{linkTitle}</a>;
     // < a href={linkHref} target="_blank" >{linkTitle}</a >;
@@ -232,14 +264,17 @@ const skatingPerformancesLinks = [
 ]
 
 const engineeringProjectLinks = [
-    ["OneWeek Hackathon / Microsoft ", "OneBoarding", ""],
-    ["Human-Computer Interaction / ETH Zürich ", "Usability Study", ""],
-    ["3D Vision / ETH Zürich ", "Global Alignment of Meshes for the Microsoft HoloLens", ""],
-    ["MIT Media Lab / Opera of the Future ", "Spaces that Perform Themselves", "kevinshum.com/portfolio/#opera"],
-    ["IoT / MIT ", "BitHunt", ""],
-    ["Sports Technology / MIT ", "Machine Learning on Athlete Tracking Data", ""],
-    ["Computational Photography / MIT ", "Painterly Rendering", ""],
-    ["Lighting Design / MIT ", "Waiting for Godot", ""],
+    ["OneWeek Hackathon / Microsoft ", "OneBoarding: Democratizing the Onboarding Process", "kevinshum.com/portfolio/#oneboarding"],
+    ["Human-Computer Interaction / ETH Zürich ", "Credit Suisse Mobile Banking Usability Study", "kevinshum.com/portfolio/#eth"],
+    ["3D Vision / ETH Zürich ", "Global Alignment of Meshes for the Microsoft HoloLens", "kevinshum.com/portfolio/#eth"],
+    ["Opera of the Future / MIT Media Lab ", "Spaces that Perform Themselves", "kevinshum.com/portfolio/#opera"],
+    ["Innovation Challenge / Accenture ", "Bamboo: Combatting Food Waste ", "kevinshum.com/portfolio/#bamboo"],
+    // ["IoT / MIT ", "BitHunt", ""],
+    ["Sports Technology / MIT ", "Machine Learning on Athlete Tracking Data", "kevinshum.com/portfolio"],
+    ["Computational Photography / MIT ", "Painterly Rendering", "kevinshum.com/portfolio"],
+    ["'You Should' / Squarespace ", "2016 Ad Campaign", "kevinshum.com/portfolio/#squarespace"],
+
+    // ["Lighting Design / MIT ", "Waiting for Godot", ""],
     ["+ more", "", "kevinshum.com/portfolio"]
 ];
 // #########################################################
@@ -308,9 +343,10 @@ const App2 = props => (
             sans: '"Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;',
         },
         fontSizes: [
-            10, 12, 18, 25, 30, 50
+            10, 12, 18, 25, 30, 50, 55
         ]
     }}>
+
 
         {/* <section-flex id="header" class="active" href="javascript:void(0)"> */}
         <section-flex id="header" justify-content="space-between">
@@ -319,67 +355,83 @@ const App2 = props => (
             {DividerRealThick}
             <Flex justifyContent="space-between" flexWrap='wrap' mx="auto" pt="1em">
                 <Box pr={[0, 0, 0, 5]} pb='2em'>
-                    <a href="#top" target={LINK_TARGET.IN_PAGE}><h1>KEVIN SHUM</h1></a>
+                    <a href="#top" target={LINK_TARGET.IN_PAGE}>
+                    <Text fontSize='6'>KEVIN SHUM</Text>
+                    </a>
                 </Box>
-                <Box pr={[0, 0, 0, 0]} pt={1} bl='2em'>
+                <Box pr={[0, 0, 0, 0]} width={[1,1,1,1/4]} pt={1} bl='2em'>
+                    <Flex justifyContent="space-between" flexWrap='wrap' mx="auto">
+
                     {/* <Divider
                         w={1}
                         border={3}
                         borderColor='black'
                     /> */}
-                    <a href="#top" target={LINK_TARGET.IN_PAGE}>
+                    <Box mr={3} mb={1} width ='auto'>
                         <Text fontSize='3'>
-                            MIT Engineer
+                            <a href="#top" target={LINK_TARGET.IN_PAGE}>
+                                MIT Engineer
+                            </a>
                         </Text>
-                    </a>
-                    <br />
-                    <a href="#top" target={LINK_TARGET.IN_PAGE}>
+                    </Box>
+                    <Box mr={3} mb={1} width ='auto'>
                         <Text fontSize='3'>
-                            Unicorn!
+                            <a href="#unicorn" target={LINK_TARGET.IN_PAGE}>
+                                Unicorn!
+                            </a>
                         </Text>
-                    </a>
-                    <br />
-                    <a href="#top" target={LINK_TARGET.IN_PAGE}>
+                    </Box>
+                    <Box mr={3} mb={1} width ='auto'>
                         <Text fontSize='3'>
-                            Pro Athlete
+                            <a href="#athlete" target={LINK_TARGET.IN_PAGE}>
+                                Pro Athlete
+                            </a>
                         </Text>
-                    </a>
-                    <br />
-                    <a href="#top" target={LINK_TARGET.IN_PAGE}>
-                        <Text fontSize='3'>
+                    </Box>
+                    <Box mr={3} mb={1} width ='auto'>
+                        <Text fontSize='3' >
+                            <a href="#globetrotter" target={LINK_TARGET.IN_PAGE}>
                             Globetrotter
+                            </a>
                         </Text>
-                    </a>
-                    <br />
+                    </Box>
+                    </Flex>
                 </Box>
             </Flex>
 
             <Box pt="2em" />
 
 
-            <Flex flexWrap='wrap' pt={50}>
+
+            <Flex justifyContent="space-between" flexWrap='wrap' mx="auto" pt="1em">
                 <Box width={[1, 1, 1, 2 / 3]} p={0}>
                     <Text fontSize='2'>
-                        Born and raised in the San Francisco Bay Area, Kevin revises Computer Science at <NiceLink title="MIT" link="web.mit.edu/" /> — Class of 2019 — with a concentration in Theater Arts. This past summer, he worked at  <NiceLink title="Microsoft" link="microsoft.com/" /> as a Software Engineer Intern in Azure Compute.
+                        Born and raised in the San Francisco Bay Area, Kevin revises Computer Science at <NiceLink title="MIT" link="web.mit.edu/" /> — Class of 2019 — with a concentration in Theater Arts. This past summer, he interned at  <NiceLink title="Microsoft" link="microsoft.com/" /> as a Software Engineer in Azure Compute.
                     </Text>
                     <Text pt='1em' fontSize='2'>
-                        He spent the first half of the year abroad, first, <NiceLink title="teaching" link="misti.mit.edu/global-teaching-labs" /> teaching high school students in Germany, and then, revising Informatik at <NiceLink title="ETH Zürich" link="ethz.ch/" />, Switzerland, for the inaugural MIT EECS x ETH exchange program.
+                        He spent the first half of the year abroad, first, <NiceLink title="teaching" link="misti.mit.edu/global-teaching-labs" /> high school students in Germany, and then, revising Informatik at <NiceLink title="ETH Zürich" link="ethz.ch/" />, Switzerland, for the inaugural MIT EECS x ETH exchange program.
                     </Text>
-                    <Text pt='1em' fontSize='2'>
+                    <Text pt='1em' pb='1.5em' fontSize='2' >
                         Kevin is the two-time reigning <NiceLink title='Collegiate Champion' link="facebook.com/153175814722275/photos/ms.c.eJwzMjAwNDI2MjAyM7UwNjYw0jOCChgaG5lYWpobAABt2waD.bps.a.1998564043516767.1073741856.153175814722275/2001232026583302/?type=3&theater" /> in figure skating, and has traveled the nation and world as a member of <NiceLink title="Team USA" link="isuresults.com/bios/isufs00034586.htm" />.
                     </Text>
-
-                    <Text pt='2em' fontSize='2' color='#8bccc5'>
-                    <b>—</b>
-                    <br/><br/>
-                    <b>HOT OFF THE PRESS: &nbsp;</b> 
-                    <NiceLink title=" How to MIT?!" link="mitadmissions.org/blogs/entry/how-to-mit/" />
-
-                    </Text>
-                    <Text>
-                    </Text>
                 </Box>
+                {/* <Box mx='auto' /> */}
+                <Flex height={1/2} width={[1, 1, 1, 1/4]} bg="gray" justifyContent="space-between" flexWrap='wrap'>
+                    <Text p={2} pb={2} fontSize='2' color='#8bccc5'>
+                        {/* <b>—</b>
+                        <br/><br/> */}
+                        <b>FROM THE BLOGS &nbsp;📰 </b> <br/>
+                        <a href="https://www.mitadmissions.org/blogs/entry/how-to-mit/" target={LINK_TARGET.NEW_TAB}>How to MIT?!</a>
+                    </Text>
+
+                    <Text p={2} pb={3} fontSize='2' color='#8bccc5'>
+                        <b>KAMERAROLLE &nbsp;📸</b> <br/>
+                        <a href="https://www.instagram.com/p/BmR_AP2l16p/?taken-by=kevinshum" target={LINK_TARGET.NEW_TAB}>Ein neues Foto gemacht</a>
+                    </Text>
+                </Flex>
             </Flex>
+
+
         </section-flex>
 
 
@@ -399,14 +451,24 @@ const App2 = props => (
             bg='blue'>
             Hello
         </Box> */}
-        <section-flex id="engineer">
+
+        <a href="#header" target={LINK_TARGET.IN_PAGE}>
+            <Image pt={5} src={spin}></Image>
+        </a>
+        <section-flex id="unicorn">
+
             <div class="content">
-                <SectionHeading title="UNICORN! 🦄" />
+                <a href="#unicorn" target={LINK_TARGET.IN_PAGE}>
+                    <SectionHeading title={sectionMappings.unicorn} />
+                </a>
 
                 <Flex flexWrap='wrap' pt={50}>
                     <Box width={[1, 1, 1, 2 / 3]} p={0}>
                         <Text fontSize='2'>
                             It all started in high school, when I learned how to program with BYOB. From there I've worked with startups and research labs, to multinational conglomerates, with all sorts of hardware and software systems at scale, both front- and back-end, from iOS apps to IoT-connected robotic furniture, from massive distributed systems to multisensory architectural installations.
+                        </Text>
+                        <Text pt='1em' fontSize='2'>
+                            At MIT, I've learned about algorithms, IoT, artificial intelligence, computational photography, and software engineering. At ETH Zürich, I attended machine learning, 3D vision, human-computer interaction, case studies, and ubiquitous computing courses.
                         </Text>
                         <Text pt="1em" fontSize='2'>
                             Ultimately, my interests lie in the intersection of design and engineering as the <i>mythic unicorn</i>.
@@ -467,7 +529,9 @@ const App2 = props => (
 
         <section-flex id="athlete">
             <div class="content">
-                <SectionHeading title="PRO ATHLETE ⛸" />
+                <a href="#athlete" target={LINK_TARGET.IN_PAGE}>
+                    <SectionHeading title={sectionMappings.athlete} />
+                </a>
 
 
                 <Flex flexWrap='wrap' pt={50}>
@@ -556,9 +620,11 @@ const App2 = props => (
 
 
                 {/* --------- TIDBITS --------- */}
-                <section-flex id="bio">
+                <section-flex id="globetrotter">
                     <div class="content">
-                        <SectionHeading title="GLOBETROTTER 🗺" />
+                        <a href="#globetrotter" target={LINK_TARGET.IN_PAGE}>
+                        <SectionHeading title={sectionMappings.globetrotter} />
+                        </a>
 
                         <Flex flexWrap='wrap' pt={50}>
                             <Box width={[1, 1, 1, 2 / 3]} p={0}>
@@ -567,7 +633,7 @@ const App2 = props => (
                             <br /><br />
                                     I love to travel and blog about my adventures for <NiceLink title="MIT Admissions" link="mitadmissions.org/blogs/author/kshum/archives" />.
                             <br /><br />
-                                    For my studies, training, and work, I've had the opportunity to explore the world, over 25 countries and counting—from Estonia to Japan, to Hong Kong to the Switzerland. Here's to more adventures to come!
+                                    For my studies, training, and work, I've had the opportunity to explore the world, over 26 countries and counting—from Estonia to Japan, to Hong Kong to the Switzerland. Here's to more adventures to come!
                             <br />
 
                                 </Text>
@@ -686,26 +752,46 @@ const App2 = props => (
 
                 {/* --------- FOOTER --------- */}
                 <footer>
-                    <Flex mx={0} flexWrap='wrap'>
+
+                    {/* <Flex alignItems='center'>
+                        <Text fontSize='2'>
+                            <a link="mailto:kshum@mit.edu?Subject=Hello%20from%20kevinshum.com" target={LINK_TARGET.IN_PAGE}>Say Hello 👋</a>
+                        </Text>
+                        <Box mx='auto' />
+                        <Text fontSize='2'>
+                            <a href="http://instagram.com/kevinshum" target={LINK_TARGET.NEW_TAB}>Find me on Instagram 📷</a>
+                        </Text>
+                        <Box mx='auto' />
+                        <Text fontSize='2'>
+                            <a href="https://www.linkedin.com/in/mrkevinshum/" target={LINK_TARGET.NEW_TAB}>Add me on LinkedIn 💼</a>
+                        </Text>
+                    </Flex> */}
+
+                    <Box mt={10}>
+                        <Divider
+                            w={1}
+                            border={3}
+                            borderColor='black'
+                        />
+                    </Box >
 
 
+                    <Flex justifyContent="space-between" flexWrap='wrap' mx="auto" pt="1em">
+                        <Text pb={5} fontSize='2' color='black'>Handcrafted with ❤️ in Seattle.</Text>
 
-
-                        <Box width={[1, 2 / 3]} >
-                            <NiceButton title="Say Hello! 👋 " target={LINK_TARGET.IN_PAGE} link="mailto:kshum@mit.edu?Subject=Hello%20from%20kevinshum.com" />
+                        <Box  width={[1,1,1,1/4]}>
+                        <Text fontSize='3'>
+                                    <a href="mailto:kshum@mit.edu?Subject=Hello%20from%20kevinshum.com" target={LINK_TARGET.IN_PAGE}>Say Hello 👋</a>
+                                </Text>
+                                <Text fontSize='3'>
+                                    <a href="http://instagram.com/kevinshum" target={LINK_TARGET.NEW_TAB}>Instagram 📷</a>
+                                </Text>
+                                <Text fontSize='3'>
+                                    <a href="https://www.linkedin.com/in/mrkevinshum/" target={LINK_TARGET.NEW_TAB}>LinkedIn 💼</a>
+                                </Text>
                         </Box>
-                        <Box width={[1, 2 / 3]} >
-                            <a href="http://instagram.com/kevinshum" target={LINK_TARGET.NEW_TAB}><button class="button" ><span>Find me on Instagram 📷</span></button></a>
-                        </Box>
-                        <Box width={[1, 2 / 3]} >
-                            <a href="https://www.linkedin.com/in/mrkevinshum/" target={LINK_TARGET.NEW_TAB}><button class="button" ><span>Add me on LinkedIn 💼</span></button></a>
-                        </Box>
-
-                    </Flex>
-
-                    {DividerThinPadded}
-                    <Text fontSize='2' color='black'>© Handcrafted with ❤️in Seattle, 2018.</Text>
-
+            </Flex>
+            
                 </footer>
 
     </Provider >
