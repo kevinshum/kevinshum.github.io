@@ -1,0 +1,17 @@
+/* .spanShow:focus ~ .toShowHide {
+    display: block;
+}
+
+.spanHide:focus ~ .toShowHide {
+    display: none;
+}
+
+p {
+    display:none;
+  }
+  .span3:focus ~ .alert {
+    display: none;
+  }
+  .span2:focus ~ .alert {
+    display: block;
+  } */
