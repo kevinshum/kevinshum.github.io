@@ -64,3 +64,11 @@ p {
   barlow {
     font-family: 'Barlow', sans-serif;
   }
+
+  .main-font {
+    font-family: benton-sans, sans-serif;
+  }
+
+  .f3 {
+    /* font-family: zeitung; */
+  }
