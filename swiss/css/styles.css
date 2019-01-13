@@ -66,9 +66,11 @@ p {
   }
 
   .main-font {
-    font-family: benton-sans, sans-serif;
+    font-family: aktiv-grotesk, sans-serif;
+font-weight: 400;
+font-style: normal;
   }
 
   .f3 {
-    /* font-family: zeitung; */
+    /* font-family: le-monde-livre-std, sans-serif; */
   }
