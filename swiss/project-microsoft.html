@@ -6,18 +6,26 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="author" content="Kevin Shum">
-    <meta name="description" content="MIT Computer Science and Team USA Figure Skater">
+    <meta name="description" content="MIT Computer Science & Team USA Figure Skater">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
-    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link rel="apple-touch-icon" sizes="120x120" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#000000">
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://use.typekit.net/rnw1ris.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132778158-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-132778158-1');
+    </script>
 </head>
 
 
@@ -57,11 +65,7 @@
             <div class="fl-ns w-100 w-50-ns pr3-m pr3-l mt3 pl3 bl bw1">
                 <h1 class="ma0 pt0 f3 fw6">
                     <a class="b ma0 pt0 link white no-underline hover-black hover-bg-white pt2 pb2 ph1" href="#1"><small
-                            class="normal pr2 ">01 </small>nompicker</a>
-                </h1>
-                <h1 class="ma0 pt0 f3 fw6">
-                    <a class="b ma0 pt0 link white no-underline hover-black hover-bg-white pt2 pb2 ph1" href="#2"><small
-                            class="normal pr2 ">02 </small>OneBoarding</a>
+                            class="normal pr2 ">01 </small>OneBoarding</a>
                 </h1>
             </div>
             <div class="fl-ns w-100 w-50-ns pl3-m pl3-l">
@@ -73,14 +77,11 @@
                         target="_blank">Azure</a>, Microsoft's cloud computing platform.
                 </p>
                 <p class="f4">
-                    That work is confidential, but in my spare time, I also had the chance to build a web app, <a class="link fw7 white no-underline hover-black hover-bg-white"
-                        href="project-microsoft.html#nompicker">nompicker</a>, the easiest way to find new
-                    spots to eat lunch, and take part in
-
-
+                    I also took part in
                     <a class="link fw7 white no-underline hover-black hover-bg-white" href="https://news.microsoft.com/life/one-week-microsoftlife/"
                         target="_blank">OneWeek</a>, Microsoft's flagship global hackathon and designed
-                    OneBoarding, one streamlined onboarding platform to empower everyone.
+                    <a class="link fw7 white no-underline hover-black hover-bg-white" href="#1">OneBoarding</a>, a
+                    streamlined onboarding platform designed to empower all new hires.
                 </p>
             </div>
         </div>
@@ -88,72 +89,8 @@
 
 
         <a class="anchor" id="1"></a>
-        <div id="nompicker" class="dt lh-copy w-100 pb3 bb bw1 mb1 mb3-ns pt2 pt3-ns ">
-            <h1 class="dtc ma0 pt0 f3 fw6"><small class="normal pr2 ">01 </small>nompicker</h1>
-            <div class="dtc v-btm tr pb1">
-                <!-- <a class="b pv2 ph1 ma0 f5 link no-underline white hover-black hover-bg-white" href="http://web.mit.edu/kshum/www/sk8mate/"
-                target="_blank">
-                Read more &#x2197;
-            </a> -->
-            </div>
-        </div>
-        <div class="w-100 overflow-auto f6">
-            <div class="w-100 overflow-auto mb4 f6">
-                <div class="fl-ns w-100 w-50-ns pr3-m pr3-l">
-                    <h1 class="f4 b ">Mission</h1>
-                    <p>
-                        <a class="link fw7 white no-underline hover-black hover-bg-white" href="https://www.microsoft.com/en-us/about "
-                            target="_blank">Empower every person and every organization on the planet to...</a>eat
-                        better.
-                    </p>
-                    <h1 class="f4 b ">User Story</h1>
-                    <p>
-                        1. You’re hard at work at your desk, hungry, and it’s about time for lunch.<br>
-                        2. You can’t decide where to go for lunch. <br>
-                        3. You go to the same café or food truck because decisions are hard.
-                    </p>
-                    <p>
-                        What if there was a tool that could empower us all to find the best place to eat?
-                        Introducing...<a class="link fw7 white no-underline hover-black hover-bg-white" href="project-microsoft.html#nompicker">nompicker</a>.
-                    </p>
-                </div>
-                <div class="fl-ns w-100 w-50-ns pl3-m pl3-l">
-                    <h1 class="f4 b ">Technologies</h1>
-                    <p>
-                        Personalized café and restaurant recommendations
-                        <br>
-                        HTML, CSS, node.js, Express & Typescript
-                        <br>
-                        Runs on a Docker container deployed on Azure in a Linux VM
-                    </p>
-                    <h1 class="f4 b ">Result</h1>
-                    <p>
-                        Demoed at 2018 Azure Intern Techfest.
-                    </p>
-                </div>
-            </div>
-            <div class="fl w-100 overlay-container grow">
-                <div class="aspect-ratio aspect-ratio--6x4">
-                    <div style="background-image:url(src/public/microsoft/nompicker1.png);" class="bg-center cover aspect-ratio--object"></div>
-                </div>
-            </div>
-            <div class="fl w-50-ns w-100 overlay-container grow pt2 pr1-ns pr0">
-                <div class="aspect-ratio aspect-ratio--6x4">
-                    <div style="background-image:url(src/public/microsoft/nompicker2.png);" class="bg-center cover aspect-ratio--object"></div>
-                </div>
-            </div>
-            <div class="fl w-50-ns w-100 overlay-container grow pt2 pl1-ns pl0">
-                <div class="aspect-ratio aspect-ratio--6x4">
-                    <div style="background-image:url(src/public/microsoft/nompicker3.png);" class="bg-center cover aspect-ratio--object"></div>
-                </div>
-            </div>
-        </div>
-
-
-
-        <a class="anchor" id="2"></a>
         <div id="oneboarding" class="dt lh-copy w-100 pb3 bb bw1 mb1 mb3-ns pt3 pt5-ns ">
-            <h1 class="dtc ma0 pt0 f3 fw6"><small class="normal pr2 ">02 </small>OneBoarding</h1>
+            <h1 class="dtc ma0 pt0 f3 fw6"><small class="normal pr2 ">01 </small>OneBoarding</h1>
             <div class="dtc v-btm tr pb1">
                 <a class="b pv2 ph1 ma0 f5 link no-underline white hover-black hover-bg-white" href="http://web.mit.edu/kshum/www/sk8mate/#features"
                     target="_blank">

@@ -91,7 +91,7 @@ font-style: normal;
 }
 
 .home-img{
-  background-image:url(/src/public/cutout.png); 
+  background-image:url(./../src/public/cutout.png); 
   background-position: bottom right;   
   background-repeat: no-repeat;
   background-size: 25% auto; 
