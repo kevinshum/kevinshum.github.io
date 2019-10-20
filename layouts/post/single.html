@@ -1,0 +1,53 @@
+{{ partial "header.html" . }}
+
+<br>
+
+<section id="main" class="w-70-ns w-100 min-vh-100 pt3-ns pt2">
+  <div itemprop="name" id="title" class="">{{ .Title }}</div>
+  <span class="gray f3-ns f5-m f5">{{ .Date.Format "2 Jan 2006" }}</span>
+  <br>
+
+  <article itemprop="articleBody" id="content" class="lh-copy ks-sans-serif lh-copy w-100 f3-ns f5-m f5 ">
+    {{ .Content }}
+  </article>
+
+  <!-- last modified note -->
+  <span class="f6 gray mv3"
+    title="Lastmod: {{ .Lastmod.Format "2 Jan 2006" }}. Published at: {{ .PublishDate.Format "2006-01-02" }}.">
+    {{ if ne .Lastmod .PublishDate }}
+    <span class="i">last modified</span> {{ dateFormat "2 Jan 2006" .Lastmod }}
+    {{ end }}
+  </span>
+
+  {{ if and (.Site.Taxonomies.series) (isset .Params "series") }}
+  <br>
+  <br>
+  <section class="mt4 bt b--gray ">
+    {{ $readMore := ":wave:" }}
+    {{ $series := .Params.series | urlize}}
+    <h3>{{ $readMore | emojify }} Related posts in the <a href="/series/{{ $series }}"
+        class="b bb bw1 pb1 no-underline white">{{ .Params.Series }}</a> series...</h3>
+
+    {{ $posts := index .Site.Taxonomies.series $series }}
+
+    {{ if (gt ($posts | len) 1)}}
+    <ul class="list pl0">
+      {{ range where $posts "Title" "!=" .Title }}
+      <li class="list pl0 lh-copy">
+        <a class="f4 b dib white no-underline" href="{{ .Permalink}}">{{ .Title }}</a>
+        <span class="f6 gray">{{ .Date.Format "2 Jan 2006" }}</span>
+      </li>
+      {{ end }}
+    </ul>
+    {{ else }}
+    <div class="ph2 i">
+      No follow up posts yet. Check back soon!
+    </div>
+    {{ end }}
+  </section>
+  {{ end }}
+
+</section>
+
+<br>
+{{ partial "footer.html" . }}
