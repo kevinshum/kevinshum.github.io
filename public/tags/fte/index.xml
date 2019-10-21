@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2019 Kevin Shum, &lt;a href=&#39;https://github.com/siegerts/hugo-theme-basic&#39;&gt;Base Theme&lt;/a&gt;. </copyright>
-    <lastBuildDate>Sun, 13 Oct 2019 23:27:59 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 20 Oct 2019 23:27:59 -0700</lastBuildDate>
     
 	<atom:link href="https://web.mit.edu/kshum/www/tags/fte/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Lake 22</title>
+      <link>https://web.mit.edu/kshum/www/post/lake-22/</link>
+      <pubDate>Sun, 20 Oct 2019 23:27:59 -0700</pubDate>
+      
+      <guid>https://web.mit.edu/kshum/www/post/lake-22/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Arboretum</title>
+      <link>https://web.mit.edu/kshum/www/post/arboretum/</link>
+      <pubDate>Sat, 19 Oct 2019 23:27:59 -0700</pubDate>
+      
+      <guid>https://web.mit.edu/kshum/www/post/arboretum/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Mount Rainier</title>

@@ -7,7 +7,6 @@ tags:
   - seattle
 ---
 
-
 After sleeping in, I convinced myself to go on a hiking adventure. I considered committing to an all-day trip to Rainier or a closer drive around Snoqualmie. The weather was decent so I thought I'd make a bet on heading into the mountains before winter (and the snow) hits. After some research online, I chose the [Skyline Trail](https://visitrainier.com/skyline-trail-panorama-point/) for the picturesque views. I refueled my car at Costco, picked up some cash and a lunch, and was on my way. 
 
 I've never done a road trip on my own, but I turned up a playlist and starting singing like I was in the shower. Two and a half hours later, I was driving through the foothills of Rainier, driving under the canopies of the evergreens. 

@@ -3,13 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://web.mit.edu/kshum/www/post/mount-rainier/</loc>
-    <lastmod>2019-10-13T23:27:59-07:00</lastmod>
+    <loc>https://web.mit.edu/kshum/www/post/lake-22/</loc>
+    <lastmod>2019-10-20T23:27:59-07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://web.mit.edu/kshum/www/project/hugo/</loc>
-    <lastmod>2019-02-10T16:53:06-05:00</lastmod>
+    <loc>https://web.mit.edu/kshum/www/post/arboretum/</loc>
+    <lastmod>2019-10-19T23:27:59-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://web.mit.edu/kshum/www/post/mount-rainier/</loc>
+    <lastmod>2019-10-13T23:27:59-07:00</lastmod>
   </url>
   
   <url>
@@ -19,55 +24,30 @@
   
   <url>
     <loc>https://web.mit.edu/kshum/www/categories/</loc>
-    <lastmod>2019-02-10T16:53:06-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://web.mit.edu/kshum/www/categories/</loc>
-    <lastmod>2019-02-10T16:53:06-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://web.mit.edu/kshum/www/tags/development/</loc>
-    <lastmod>2019-02-10T16:53:06-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://web.mit.edu/kshum/www/categories/development/</loc>
-    <lastmod>2019-02-10T16:53:06-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://web.mit.edu/kshum/www/tags/fte/</loc>
-    <lastmod>2019-10-13T23:27:59-07:00</lastmod>
+    <lastmod>2019-10-20T23:27:59-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://web.mit.edu/kshum/www/</loc>
-    <lastmod>2019-10-13T23:27:59-07:00</lastmod>
+    <lastmod>2019-10-20T23:27:59-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://web.mit.edu/kshum/www/post/</loc>
-    <lastmod>2019-10-13T23:27:59-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://web.mit.edu/kshum/www/project/</loc>
-    <lastmod>2019-02-10T16:53:06-05:00</lastmod>
+    <lastmod>2019-10-20T23:27:59-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://web.mit.edu/kshum/www/tags/seattle/</loc>
-    <lastmod>2019-10-13T23:27:59-07:00</lastmod>
+    <lastmod>2019-10-20T23:27:59-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -78,7 +58,7 @@
   
   <url>
     <loc>https://web.mit.edu/kshum/www/tags/</loc>
-    <lastmod>2019-02-10T16:53:06-05:00</lastmod>
+    <lastmod>2019-10-20T23:27:59-07:00</lastmod>
     <priority>0</priority>
   </url>
   
