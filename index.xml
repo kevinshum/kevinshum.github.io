@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kevin Shum</title>
+    <link>https://kevinshum.com/</link>
+    <description>Recent content on Kevin Shum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2019 Kevin Shum, &lt;a href=&#39;https://github.com/siegerts/hugo-theme-basic&#39;&gt;Base Theme&lt;/a&gt;. </copyright>
+    <lastBuildDate>Sun, 20 Oct 2019 23:27:59 -0700</lastBuildDate>
+    
+	<atom:link href="https://kevinshum.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lake 22</title>
+      <link>https://kevinshum.com/post/lake-22/</link>
+      <pubDate>Sun, 20 Oct 2019 23:27:59 -0700</pubDate>
+      
+      <guid>https://kevinshum.com/post/lake-22/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Arboretum</title>
+      <link>https://kevinshum.com/post/arboretum/</link>
+      <pubDate>Sat, 19 Oct 2019 23:27:59 -0700</pubDate>
+      
+      <guid>https://kevinshum.com/post/arboretum/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mount Rainier</title>
+      <link>https://kevinshum.com/post/mount-rainier/</link>
+      <pubDate>Sun, 13 Oct 2019 23:27:59 -0700</pubDate>
+      
+      <guid>https://kevinshum.com/post/mount-rainier/</guid>
+      <description>After sleeping in, I convinced myself to go on a hiking adventure. I considered committing to an all-day trip to Rainier or a closer drive around Snoqualmie. The weather was decent so I thought I&amp;rsquo;d make a bet on heading into the mountains before winter (and the snow) hits. After some research online, I chose the Skyline Trail for the picturesque views. I refueled my car at Costco, picked up some cash and a lunch, and was on my way.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://kevinshum.com/about/</link>
+      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevinshum.com/about/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
