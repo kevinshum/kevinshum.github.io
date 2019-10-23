@@ -1,0 +1,41 @@
+baseURL = "https://web.mit.edu/kshum/www/"
+title = "Kevin Shum"
+languageCode = "en-us"
+googleAnalytics = "UA-132778158-X"
+enableEmoji = true 
+copyright = "© 2019 Kevin Shum, <a href='https://github.com/siegerts/hugo-theme-basic'>Base Theme</a>. "
+description = "Kevin Shum"
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+
+[params]
+  titleEmoji = ":tada:"
+  twitter = "kevinshum"
+
+[Permalinks]
+  post = "post/:slug"
+
+[[params.menu]]
+  name = "blog"
+  url = "post/"
+
+[[params.menu]]
+  name = "post series"
+  url = "series/"
+  
+[[params.menu]]
+  name = "about"
+  url = "about/"
+
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
+    useSessionStorage = true
+  [privacy.twitter]
+    enableDNT = true
+  [privacy.youtube]
+    privacyEnhanced = true

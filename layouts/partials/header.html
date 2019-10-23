@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="" lang="{{ .Site.LanguageCode }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+
+<head>
+  <meta charset="utf-8" />
+
+  {{ partial "meta.html" . }}
+
+  <title>{{ .Title }}</title>
+  <link rel="canonical" href="{{ .Permalink }}" />
+  {{ $title := .Title }}
+  {{ with .OutputFormats.Get "RSS" }}
+  <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $title }}" />
+  {{ end }}
+  {{ partial "head_includes.html" . }}
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <link rel="apple-touch-icon" sizes="120x120" href="./apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#000000">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>Kevin Shum</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="author" content="Kevin Shum">
+  <meta name="description" content="MIT Computer Science & Team USA Figure Skater">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body class="cf lh-copy ma0 pa0 white background-grey ks-sans-serif f2-ns f4-m f4 bw1 b--gray">
+  <div class="ph5-ns ph2 center">
+    <div class="pt4-ns pt f2-ns f4-m f4 floating-menu ">
+      <a href="http://web.mit.edu/kshum/www" class="gray link hover-gold nowrap pr0-ns pr3 underline ">KEVIN SHUM</a>
+      <div class="w-70 nowrap">
+        <a href="http://web.mit.edu/kshum/www/post/" class="gray link hover-gold pr0-ns underline ">BLOG</a><br>
+        <a class="gray link hover-gold pr0-ns pr3 underline "
+          href="mailto:kshum@mit.edu?Subject=Hello%20from%20kevinshum.com" target="_top">CONTACT</a>
+      </div>
+      <!-- <a href="http://web.mit.edu/kshum/www/portfolio.html" target="_blank"
+          class="gray link hover-gold nowrap pr0-ns pr3">WORK</a>-->
+    </div>
+    <!-- <nav>
+    <div class="floating-menu ks-sans-serif f3 tracked ">
+      <a href="/" class="white link hover-gold">BIO</a><br>
+      <a href="/post" class="white link hover-gold">BLOG</a><br>
+      <a href="http://web.mit.edu/kshum/www/portfolio.html" class="white link hover-gold">WORK</a><br>
+      <a href="/" class="white link hover-gold">CONTACT</a>
+    </div>
+  </nav> -->
