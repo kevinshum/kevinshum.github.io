@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kevinshum.com/post/snoqualmie-falls/</loc>
+    <lastmod>2019-11-17T23:27:59-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kevinshum.com/post/lake-22/</loc>
     <lastmod>2019-10-20T23:27:59-07:00</lastmod>
   </url>
@@ -13,8 +18,18 @@
   </url>
   
   <url>
+    <loc>https://kevinshum.com/post/month-1/</loc>
+    <lastmod>2019-10-13T23:27:59-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kevinshum.com/post/mount-rainier/</loc>
     <lastmod>2019-10-13T23:27:59-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevinshum.com/post/hello-world/</loc>
+    <lastmod>2019-09-10T23:27:59-07:00</lastmod>
   </url>
   
   <url>
@@ -29,25 +44,25 @@
   
   <url>
     <loc>https://kevinshum.com/tags/fte/</loc>
-    <lastmod>2019-10-20T23:27:59-07:00</lastmod>
+    <lastmod>2019-11-17T23:27:59-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kevinshum.com/</loc>
-    <lastmod>2019-10-20T23:27:59-07:00</lastmod>
+    <lastmod>2019-11-17T23:27:59-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kevinshum.com/post/</loc>
-    <lastmod>2019-10-20T23:27:59-07:00</lastmod>
+    <lastmod>2019-11-17T23:27:59-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kevinshum.com/tags/seattle/</loc>
-    <lastmod>2019-10-20T23:27:59-07:00</lastmod>
+    <lastmod>2019-11-17T23:27:59-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -58,7 +73,7 @@
   
   <url>
     <loc>https://kevinshum.com/tags/</loc>
-    <lastmod>2019-10-20T23:27:59-07:00</lastmod>
+    <lastmod>2019-11-17T23:27:59-07:00</lastmod>
     <priority>0</priority>
   </url>
   

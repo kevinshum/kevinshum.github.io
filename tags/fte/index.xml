@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2019 Kevin Shum, &lt;a href=&#39;https://github.com/siegerts/hugo-theme-basic&#39;&gt;Base Theme&lt;/a&gt;. </copyright>
-    <lastBuildDate>Sun, 20 Oct 2019 23:27:59 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 17 Nov 2019 23:27:59 -0700</lastBuildDate>
     
 	<atom:link href="https://kevinshum.com/tags/fte/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Snoqualmie Falls</title>
+      <link>https://kevinshum.com/post/snoqualmie-falls/</link>
+      <pubDate>Sun, 17 Nov 2019 23:27:59 -0700</pubDate>
+      
+      <guid>https://kevinshum.com/post/snoqualmie-falls/</guid>
+      <description>This week went by pretty quickly. This weekend I wanted it to take it more low-key. Friday night and Saturday, aside from skating, I stayed indoors. The weather was a bit grey and gloomy, rainy too.
+Earlier today, the weather cleared up slightly in the morning, and I even felt some sun and saw a patch of blue skies on my way to Snoqualmie Falls. Only 35 minutes outside the city, the Falls are more of a tourist attraction than a hike.</description>
+    </item>
     
     <item>
       <title>Lake 22</title>
@@ -33,12 +43,33 @@ On this cozy fall afternoon, some went jogging along the muddy paths, some fishi
     </item>
     
     <item>
+      <title>Month 1</title>
+      <link>https://kevinshum.com/post/month-1/</link>
+      <pubDate>Sun, 13 Oct 2019 23:27:59 -0700</pubDate>
+      
+      <guid>https://kevinshum.com/post/month-1/</guid>
+      <description>Where does the time go?
+One month in, and there&amp;rsquo;s still so much I want to get done. I&amp;rsquo;m getting better at driving, meeting new people and learning new things at work, and taking the time to explore my neighborhood and the city.
+Saturday I headed to the rink once again and attempted more triples than I expected. I even landed a triple lutz-triple toe combo, not perfect, but rotated. Really, here, I&amp;rsquo;m relying all on muscle memory, from the thousands of repetitions I&amp;rsquo;ve engrained over the years.</description>
+    </item>
+    
+    <item>
       <title>Mount Rainier</title>
       <link>https://kevinshum.com/post/mount-rainier/</link>
       <pubDate>Sun, 13 Oct 2019 23:27:59 -0700</pubDate>
       
       <guid>https://kevinshum.com/post/mount-rainier/</guid>
       <description>After sleeping in, I convinced myself to go on a hiking adventure. I considered committing to an all-day trip to Rainier or a closer drive around Snoqualmie. The weather was decent so I thought I&amp;rsquo;d make a bet on heading into the mountains before winter (and the snow) hits. After some research online, I chose the Skyline Trail for the picturesque views. I refueled my car at Costco, picked up some cash and a lunch, and was on my way.</description>
+    </item>
+    
+    <item>
+      <title>Hello World!</title>
+      <link>https://kevinshum.com/post/hello-world/</link>
+      <pubDate>Tue, 10 Sep 2019 23:27:59 -0700</pubDate>
+      
+      <guid>https://kevinshum.com/post/hello-world/</guid>
+      <description>After circumnavigating the globe in less than 90 days, I landed back in the US longing to settle down, rest, and reflect on the wildest adventures that encompassed breathtaking hikes and waterfalls and last-minute food poisoning, snorkeling in the Pacific and witnessing kids fighting for their future.
+With hundreds of gigabytes of photos and journal entires to look back on, I had to put that briefly on hold as I now embark on my next adventure: full-time, adult life.</description>
     </item>
     
   </channel>
