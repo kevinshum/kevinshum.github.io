@@ -33,8 +33,18 @@
   </url>
   
   <url>
-    <loc>https://kevinshum.com/about/</loc>
-    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
+    <loc>https://kevinshum.com/post/-more/</loc>
+    <lastmod>2019-06-08T23:27:59-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevinshum.com/properties/</loc>
+    <lastmod>2017-12-29T12:15:02+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevinshum.com/studio/</loc>
+    <lastmod>2017-12-29T12:15:02+00:00</lastmod>
   </url>
   
   <url>
@@ -45,6 +55,12 @@
   <url>
     <loc>https://kevinshum.com/tags/fte/</loc>
     <lastmod>2019-11-17T23:27:59-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kevinshum.com/series/hugo-101/</loc>
+    <lastmod>2019-09-10T23:27:59-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -68,12 +84,25 @@
   
   <url>
     <loc>https://kevinshum.com/series/</loc>
+    <lastmod>2019-09-10T23:27:59-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kevinshum.com/tags/</loc>
     <lastmod>2019-11-17T23:27:59-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kevinshum.com/categories/test/</loc>
+    <lastmod>2017-12-29T12:15:02+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kevinshum.com/tags/test/</loc>
+    <lastmod>2017-12-29T12:15:02+00:00</lastmod>
     <priority>0</priority>
   </url>
   

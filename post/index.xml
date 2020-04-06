@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Kevin Shum</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2019 Kevin Shum, &lt;a href=&#39;https://github.com/siegerts/hugo-theme-basic&#39;&gt;Base Theme&lt;/a&gt;. </copyright>
+    <copyright>© 2020 Kevin Shum, &lt;a href=&#39;https://github.com/siegerts/hugo-theme-basic&#39;&gt;Base Theme&lt;/a&gt;. </copyright>
     <lastBuildDate>Sun, 17 Nov 2019 23:27:59 -0700</lastBuildDate>
     
 	<atom:link href="https://kevinshum.com/post/index.xml" rel="self" type="application/rss+xml" />
@@ -70,6 +70,15 @@ Saturday I headed to the rink once again and attempted more triples than I expec
       <guid>https://kevinshum.com/post/hello-world/</guid>
       <description>After circumnavigating the globe in less than 90 days, I landed back in the US longing to settle down, rest, and reflect on the wildest adventures that encompassed breathtaking hikes and waterfalls and last-minute food poisoning, snorkeling in the Pacific and witnessing kids fighting for their future.
 With hundreds of gigabytes of photos and journal entires to look back on, I had to put that briefly on hold as I now embark on my next adventure: full-time, adult life.</description>
+    </item>
+    
+    <item>
+      <title>&#43; MORE</title>
+      <link>https://kevinshum.com/post/-more/</link>
+      <pubDate>Sat, 08 Jun 2019 23:27:59 -0700</pubDate>
+      
+      <guid>https://kevinshum.com/post/-more/</guid>
+      <description>More blogs at MIT Admissions &amp;rarr;</description>
     </item>
     
   </channel>

@@ -1,8 +1,16 @@
+/* :root{
+--MENU-SECTIONS-ACTIVE
+} */
+
 body {
   -webkit-font-smoothings: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   background: rgb(30, 30, 30);  
+}
+
+.bw1 {
+  border-width: .07rem !important;
 }
 
 code {
@@ -30,27 +38,49 @@ code {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-a{
-  color: gold;
-
-  /* gold link hover-white ks-serif f4 b */
-
+.active {
+  text-decoration: underline;
 }
+
+
+
+a {
+  font-family: ivymode, serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: .1rem;
+  color: white;
+  text-decoration: none;
+  margin-bottom: .25rem;
+  /* gold link hover-white ks-serif f4 b */
+  opacity: 1;
+  transition: opacity .15s ease-in;
+}
+a:hover,
+a:focus {
+  opacity: .5;
+  transition: opacity .15s ease-in;
+}
+a:active {
+  opacity: .8; transition: opacity .15s ease-out;
+}
+
+
   .ks-sans-serif {
-    font-family: acumin-pro-wide, sans-serif;
     /* font-family: stratos, serif; */
-    font-weight: 300;
+    font-weight: 200;
     font-style: normal;
-    color:  rgba(255,255,255,.7)
-
+    /* color: pink; */
+    color:  rgba(255,255,255,.7);
+    font-family: acumin-pro-wide, sans-serif;
   }
-
-
+  
   .ks-serif {
-    font-family: lemonde-journal,serif;
+    font-family: ivymode,serif;
+    /* font-family: lemonde-journal,serif; */
     font-weight: 400;
     font-style: normal;
+    letter-spacing: .1rem;
     /* text-decoration: underline; */
   }
 
@@ -58,6 +88,10 @@ a{
     margin-bottom: 1px;
     border-bottom-style: solid;
     border-bottom-width: .125rem;
+  }
+
+  .ks-italic {
+    font-style: italic;
   }
 
   .ks-big {
@@ -91,7 +125,11 @@ font-style: normal;
   }
 
   .background-grey {
-    background: rgb(25, 25, 25);
+    background: rgb(42, 54, 69);
+
+    /* background: rgb(40, 50, 59); */
+    /* background: rgb(25, 25, 25); */
+
   }
 
   .gray-gradient {
@@ -135,3 +173,14 @@ font-style: normal;
       width: 100%;
     }
   } */
+
+
+  .vl {
+    border-left: 2px solid rgba(255,255,255,.7)
+    ;
+    height: 2em;
+    position: relative;
+    left: 50%;
+    margin-left: -1px;
+    top: 0;
+  }

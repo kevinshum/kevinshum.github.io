@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo 101 on Kevin Shum</title>
+    <link>https://kevinshum.com/series/hugo-101/</link>
+    <description>Recent content in Hugo 101 on Kevin Shum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2020 Kevin Shum, &lt;a href=&#39;https://github.com/siegerts/hugo-theme-basic&#39;&gt;Base Theme&lt;/a&gt;. </copyright>
+    <lastBuildDate>Tue, 10 Sep 2019 23:27:59 -0700</lastBuildDate>
+    
+	<atom:link href="https://kevinshum.com/series/hugo-101/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hello World!</title>
+      <link>https://kevinshum.com/post/hello-world/</link>
+      <pubDate>Tue, 10 Sep 2019 23:27:59 -0700</pubDate>
+      
+      <guid>https://kevinshum.com/post/hello-world/</guid>
+      <description>After circumnavigating the globe in less than 90 days, I landed back in the US longing to settle down, rest, and reflect on the wildest adventures that encompassed breathtaking hikes and waterfalls and last-minute food poisoning, snorkeling in the Pacific and witnessing kids fighting for their future.
+With hundreds of gigabytes of photos and journal entires to look back on, I had to put that briefly on hold as I now embark on my next adventure: full-time, adult life.</description>
+    </item>
+    
+  </channel>
+</rss>

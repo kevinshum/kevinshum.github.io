@@ -6,7 +6,7 @@
     <description>Recent content on Kevin Shum</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2019 Kevin Shum, &lt;a href=&#39;https://github.com/siegerts/hugo-theme-basic&#39;&gt;Base Theme&lt;/a&gt;. </copyright>
+    <copyright>© 2020 Kevin Shum, &lt;a href=&#39;https://github.com/siegerts/hugo-theme-basic&#39;&gt;Base Theme&lt;/a&gt;. </copyright>
     <lastBuildDate>Sun, 17 Nov 2019 23:27:59 -0700</lastBuildDate>
     
 	<atom:link href="https://kevinshum.com/index.xml" rel="self" type="application/rss+xml" />
@@ -73,12 +73,37 @@ With hundreds of gigabytes of photos and journal entires to look back on, I had 
     </item>
     
     <item>
-      <title>About</title>
-      <link>https://kevinshum.com/about/</link>
-      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
+      <title>&#43; MORE</title>
+      <link>https://kevinshum.com/post/-more/</link>
+      <pubDate>Sat, 08 Jun 2019 23:27:59 -0700</pubDate>
       
-      <guid>https://kevinshum.com/about/</guid>
-      <description></description>
+      <guid>https://kevinshum.com/post/-more/</guid>
+      <description>More blogs at MIT Admissions &amp;rarr;</description>
+    </item>
+    
+    <item>
+      <title>Properties</title>
+      <link>https://kevinshum.com/properties/</link>
+      <pubDate>Fri, 29 Dec 2017 12:15:02 +0000</pubDate>
+      
+      <guid>https://kevinshum.com/properties/</guid>
+      <description>COMING SOON... </description>
+    </item>
+    
+    <item>
+      <title>Studio</title>
+      <link>https://kevinshum.com/studio/</link>
+      <pubDate>Fri, 29 Dec 2017 12:15:02 +0000</pubDate>
+      
+      <guid>https://kevinshum.com/studio/</guid>
+      <description>Shum+ is a design studio centered in the intersection of design and engineering — envisioning and developing the next-generation of user interactions01, interfaces02, and experiences03. More &amp;#x2197; -- MIT
+MIT Media Lab ETH Zürich
+Priceline.com
+Credit Suisse
+Accenture
+MIT Consulting Group
+Squarespace
+--  01 New Interactions MIT Media Lab  / MIT  / ETH Zürich  --     MIT Media Lab      MIT CSAIL      MIT Engineering Interactive Technologies      ETH Zürich      02 New Interfaces Credit Suisse  / MIT  / ETH Zürich  --     Credit Suisse      Priceline.</description>
     </item>
     
   </channel>
