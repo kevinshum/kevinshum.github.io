@@ -42,6 +42,10 @@ code {
   text-decoration: underline;
 }
 
+.normal-spacing {
+  letter-spacing: 0;
+}
+
 
 
 a {
@@ -54,15 +58,15 @@ a {
   margin-bottom: .25rem;
   /* gold link hover-white ks-serif f4 b */
   opacity: 1;
-  transition: opacity .15s ease-in;
+  transition: opacity .5s ease-in;
 }
 a:hover,
 a:focus {
   opacity: .5;
-  transition: opacity .15s ease-in;
+  transition: opacity .5s ease-in;
 }
 a:active {
-  opacity: .8; transition: opacity .15s ease-out;
+  opacity: .8; transition: opacity .5s ease-out;
 }
 
 

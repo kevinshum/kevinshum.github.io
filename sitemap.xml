@@ -3,6 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kevinshum.com/post/wfh-ministry-of-supply/</loc>
+    <lastmod>2020-04-11T23:27:59-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevinshum.com/post/wfh-space-monitor/</loc>
+    <lastmod>2020-04-11T23:27:59-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevinshum.com/post/wfh-quarantine-cooking/</loc>
+    <lastmod>2020-04-01T23:27:59-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevinshum.com/post/real-estate-agent/</loc>
+    <lastmod>2020-03-10T23:27:59-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevinshum.com/post/vote/</loc>
+    <lastmod>2020-03-08T23:27:59-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevinshum.com/post/common-projects/</loc>
+    <lastmod>2020-03-01T23:27:59-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevinshum.com/post/lake-serene/</loc>
+    <lastmod>2019-11-23T23:27:59-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kevinshum.com/post/snoqualmie-falls/</loc>
     <lastmod>2019-11-17T23:27:59-07:00</lastmod>
   </url>
@@ -33,11 +68,6 @@
   </url>
   
   <url>
-    <loc>https://kevinshum.com/post/-more/</loc>
-    <lastmod>2019-06-08T23:27:59-07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kevinshum.com/properties/</loc>
     <lastmod>2017-12-29T12:15:02+00:00</lastmod>
   </url>
@@ -54,7 +84,7 @@
   
   <url>
     <loc>https://kevinshum.com/tags/fte/</loc>
-    <lastmod>2019-11-17T23:27:59-07:00</lastmod>
+    <lastmod>2020-04-11T23:27:59-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -66,19 +96,19 @@
   
   <url>
     <loc>https://kevinshum.com/</loc>
-    <lastmod>2019-11-17T23:27:59-07:00</lastmod>
+    <lastmod>2020-04-11T23:27:59-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kevinshum.com/post/</loc>
-    <lastmod>2019-11-17T23:27:59-07:00</lastmod>
+    <lastmod>2020-04-11T23:27:59-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kevinshum.com/tags/seattle/</loc>
-    <lastmod>2019-11-17T23:27:59-07:00</lastmod>
+    <lastmod>2020-04-11T23:27:59-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -90,18 +120,18 @@
   
   <url>
     <loc>https://kevinshum.com/tags/</loc>
-    <lastmod>2019-11-17T23:27:59-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kevinshum.com/categories/test/</loc>
-    <lastmod>2017-12-29T12:15:02+00:00</lastmod>
+    <lastmod>2020-04-11T23:27:59-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kevinshum.com/tags/test/</loc>
+    <lastmod>2017-12-29T12:15:02+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kevinshum.com/categories/test/</loc>
     <lastmod>2017-12-29T12:15:02+00:00</lastmod>
     <priority>0</priority>
   </url>
