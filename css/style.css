@@ -69,29 +69,35 @@ a:active {
   opacity: .8; transition: opacity .5s ease-out;
 }
 
-
+.ks-italic {
+  font-family: aktiv-grotesk, serif;
+font-weight: 300;
+}
   .ks-sans-serif {
     /* font-family: stratos, serif; */
-    font-weight: 200;
+    font-weight: 300;
     font-style: normal;
     /* color: pink; */
     color:  rgba(255,255,255,.7);
-    font-family: acumin-pro-wide, sans-serif;
+    font-family: ivymode, serif;
+    
+    letter-spacing: 0.08rem;
   }
   
   .ks-serif {
     font-family: ivymode,serif;
     /* font-family: lemonde-journal,serif; */
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
-    letter-spacing: .1rem;
+    letter-spacing: 0.08rem;
+
     /* text-decoration: underline; */
   }
 
   .ks-link {
     margin-bottom: 1px;
     border-bottom-style: solid;
-    border-bottom-width: .125rem;
+    border-bottom-width: 0.1rem;
   }
 
   .ks-italic {
