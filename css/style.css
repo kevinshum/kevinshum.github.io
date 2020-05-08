@@ -46,7 +46,9 @@ code {
   letter-spacing: 0;
 }
 
-
+.ks-grey {
+  color:  rgba(255,255,255,.7);
+}
 
 a {
   font-family: ivymode, serif;
@@ -185,10 +187,9 @@ font-style: normal;
   } */
 
 
-  .vl {
-    border-left: 2px solid rgba(255,255,255,.7)
-    ;
-    height: 2em;
+  .ks-vline {
+    border-left: 1px solid rgba(255,255,255,.7);
+    height: 6em;
     position: relative;
     left: 50%;
     margin-left: -1px;
