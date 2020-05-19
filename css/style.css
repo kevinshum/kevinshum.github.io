@@ -86,6 +86,27 @@ a:active {
   transition: opacity .5s ease-out !important;
 }
 
+
+.ks-button {
+  background-color: rgb(42, 54, 69);
+  color: white;
+  transition: background-color 0.5s ease-in !important;
+}
+.ks-button:hover,
+.ks-button:focus {
+  background-color:  white;
+  color: rgb(42, 54, 69);
+  transition: background-color 1s ease-in !important;
+  transition: color 0.5s ease-in !important;
+}
+.ks-button:active {
+  background-color: white;
+  color: rgb(42, 54, 69);
+  transition: background-color 0.5s ease-in !important;
+  transition: color 0.5s ease-in !important;
+}
+
+
 .ks-italic {
   font-family: aktiv-grotesk, serif;
 font-weight: 300;
