@@ -54,7 +54,7 @@ a {
   font-family: ivymode, serif;
   font-weight: 400;
   font-style: normal;
-  letter-spacing: .1rem;
+  letter-spacing: 0.08rem;
   color: white;
   text-decoration: none;
   margin-bottom: .25rem;
@@ -70,6 +70,42 @@ a:focus {
 a:active {
   opacity: .8; transition: opacity .5s ease-out;
 }
+
+.ks-dim {
+  /* color: green; */
+  opacity: 1;
+  transition: opacity .5s ease-in !important;
+}
+.ks-dim:hover,
+.ks-dim:focus {
+  opacity: .5 !important;
+  transition: opacity .5s ease-in !important;
+}
+.ks-dim:active {
+  opacity: .8 !important;
+  transition: opacity .5s ease-out !important;
+}
+
+
+.ks-button {
+  background-color: rgb(42, 54, 69);
+  color: white;
+  transition: background-color 0.5s ease-in !important;
+}
+.ks-button:hover,
+.ks-button:focus {
+  background-color:  white;
+  color: rgb(42, 54, 69);
+  transition: background-color 1s ease-in !important;
+  transition: color 0.5s ease-in !important;
+}
+.ks-button:active {
+  background-color: white;
+  color: rgb(42, 54, 69);
+  transition: background-color 0.5s ease-in !important;
+  transition: color 0.5s ease-in !important;
+}
+
 
 .ks-italic {
   font-family: aktiv-grotesk, serif;
@@ -99,7 +135,7 @@ font-weight: 300;
   .ks-link {
     margin-bottom: 1px;
     border-bottom-style: solid;
-    border-bottom-width: 0.1rem;
+    letter-spacing: 0.08rem;
   }
 
   .ks-italic {

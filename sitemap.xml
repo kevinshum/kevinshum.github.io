@@ -121,6 +121,12 @@
   </url>
   
   <url>
+    <loc>https://kevinshum.com/tags/main/</loc>
+    <lastmod>2017-12-29T12:15:02+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://kevinshum.com/tags/misti/</loc>
     <lastmod>2019-07-11T23:27:59-07:00</lastmod>
     <priority>0</priority>
@@ -152,12 +158,6 @@
   
   <url>
     <loc>https://kevinshum.com/categories/test/</loc>
-    <lastmod>2017-12-29T12:15:02+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kevinshum.com/tags/test/</loc>
     <lastmod>2017-12-29T12:15:02+00:00</lastmod>
     <priority>0</priority>
   </url>
