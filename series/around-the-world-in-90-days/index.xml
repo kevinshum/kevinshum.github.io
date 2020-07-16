@@ -1,38 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Around the World in 90 Days on Kevin Shum</title>
-    <link>https://kevinshum.com/series/around-the-world-in-90-days/</link>
-    <description>Recent content in Around the World in 90 Days on Kevin Shum</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>© 2020 Kevin Shum, &lt;a href=&#39;https://github.com/siegerts/hugo-theme-basic&#39;&gt;Base Theme&lt;/a&gt;. </copyright>
-    <lastBuildDate>Thu, 11 Jul 2019 23:27:59 -0700</lastBuildDate>
-    
-	<atom:link href="https://kevinshum.com/series/around-the-world-in-90-days/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>What’s in a Name?</title>
-      <link>https://kevinshum.com/post/whats-in-a-name/</link>
-      <pubDate>Thu, 11 Jul 2019 23:27:59 -0700</pubDate>
-      
-      <guid>https://kevinshum.com/post/whats-in-a-name/</guid>
-      <description>An Opportunity to Form Community and Forge a Sense of Belonging
-Five weeks in, I’ve been getting better at remembering everyone’s name: the people on my team at OZÉ, the students I’m guest lecturing at the University of Ghana, and the local street vendors from whom I shop and purchase snacks and lunch. For example, there’s my co-worker Prince, a very unique but common name in Ghana; Mahfouz, who has roots in Mali and Togo; Kristen, who switches between her Ghanian and English name depending on who she is talking with; Janet, sometimes called Jane; Samuelle, a female but just as strong of a name as Samuel; and Rosalind and Rosa, sisters who share similar names who own adjacent shops.</description>
-    </item>
-    
-    <item>
-      <title>What does Ghana, Hong Kong, and the US have in common?</title>
-      <link>https://kevinshum.com/post/what-does-ghana-hong-kong-and-the-us-have-in-common/</link>
-      <pubDate>Wed, 10 Jul 2019 23:27:59 -0700</pubDate>
-      
-      <guid>https://kevinshum.com/post/what-does-ghana-hong-kong-and-the-us-have-in-common/</guid>
-      <description>“Where are you from?”
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Around the World in 90 Days on Kevin Shum</title><link>https://kevinshum.com/series/around-the-world-in-90-days/</link><description>Recent content in Around the World in 90 Days on Kevin Shum</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>© 2020 Kevin Shum, &lt;a href='https://github.com/siegerts/hugo-theme-basic'>Base Theme&lt;/a>.</copyright><lastBuildDate>Thu, 11 Jul 2019 23:27:59 -0700</lastBuildDate><atom:link href="https://kevinshum.com/series/around-the-world-in-90-days/index.xml" rel="self" type="application/rss+xml"/><item><title>What’s in a Name?</title><link>https://kevinshum.com/post/whats-in-a-name/</link><pubDate>Thu, 11 Jul 2019 23:27:59 -0700</pubDate><guid>https://kevinshum.com/post/whats-in-a-name/</guid><description>An Opportunity to Form Community and Forge a Sense of Belonging
+Five weeks in, I’ve been getting better at remembering everyone’s name: the people on my team at OZÉ, the students I’m guest lecturing at the University of Ghana, and the local street vendors from whom I shop and purchase snacks and lunch. For example, there’s my co-worker Prince, a very unique but common name in Ghana; Mahfouz, who has roots in Mali and Togo; Kristen, who switches between her Ghanian and English name depending on who she is talking with; Janet, sometimes called Jane; Samuelle, a female but just as strong of a name as Samuel; and Rosalind and Rosa, sisters who share similar names who own adjacent shops.</description></item><item><title>What does Ghana, Hong Kong, and the US have in common?</title><link>https://kevinshum.com/post/what-does-ghana-hong-kong-and-the-us-have-in-common/</link><pubDate>Wed, 10 Jul 2019 23:27:59 -0700</pubDate><guid>https://kevinshum.com/post/what-does-ghana-hong-kong-and-the-us-have-in-common/</guid><description>“Where are you from?”
 “The US.”
 &amp;ldquo;You are a liar!&amp;rdquo; he shouted at me. The others jumped in. &amp;ldquo;You aren&amp;rsquo;t American! Just look at your face, your eyes, your hair!&amp;rdquo;
-I was helping &amp;lsquo;storm&amp;rsquo; the local arts market in Accra, Ghana, with other sales reps at the startup I’m interning at. We were ready to leave when we met a group of shop owners near the entrance who were more curious about figuring out where exactly I was from.</description>
-    </item>
-    
-  </channel>
-</rss>
+I was helping &amp;lsquo;storm&amp;rsquo; the local arts market in Accra, Ghana, with other sales reps at the startup I’m interning at. We were ready to leave when we met a group of shop owners near the entrance who were more curious about figuring out where exactly I was from.</description></item></channel></rss>
