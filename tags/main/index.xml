@@ -1,8 +1,41 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>main on Kevin Shum</title><link>https://kevinshum.com/tags/main/</link><description>Recent content in main on Kevin Shum</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>© 2020 Kevin Shum, &lt;a href='https://github.com/siegerts/hugo-theme-basic'>Base Theme&lt;/a>.</copyright><lastBuildDate>Fri, 29 Dec 2017 12:15:02 +0000</lastBuildDate><atom:link href="https://kevinshum.com/tags/main/index.xml" rel="self" type="application/rss+xml"/><item><title>Properties</title><link>https://kevinshum.com/properties/</link><pubDate>Fri, 29 Dec 2017 12:15:02 +0000</pubDate><guid>https://kevinshum.com/properties/</guid><description>COMING SOON...</description></item><item><title>Studio</title><link>https://kevinshum.com/studio/</link><pubDate>Fri, 29 Dec 2017 12:15:02 +0000</pubDate><guid>https://kevinshum.com/studio/</guid><description>Shum+ is a design studio centered in the intersection of design and engineering — envisioning and developing the next-generation of user interactions01, interfaces02, and experiences03. More &amp;#x2197; -- MIT
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Main on Kevin Shum</title>
+    <link>https://kevinshum.com/tags/main/</link>
+    <description>Recent content in Main on Kevin Shum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2020 Kevin Shum, &lt;a href=&#39;https://github.com/siegerts/hugo-theme-basic&#39;&gt;Base Theme&lt;/a&gt;. </copyright>
+    <lastBuildDate>Fri, 29 Dec 2017 12:15:02 +0000</lastBuildDate>
+    
+	<atom:link href="https://kevinshum.com/tags/main/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Properties</title>
+      <link>https://kevinshum.com/properties/</link>
+      <pubDate>Fri, 29 Dec 2017 12:15:02 +0000</pubDate>
+      
+      <guid>https://kevinshum.com/properties/</guid>
+      <description>COMING SOON... </description>
+    </item>
+    
+    <item>
+      <title>Studio</title>
+      <link>https://kevinshum.com/studio/</link>
+      <pubDate>Fri, 29 Dec 2017 12:15:02 +0000</pubDate>
+      
+      <guid>https://kevinshum.com/studio/</guid>
+      <description>Shum+ is a design studio centered in the intersection of design and engineering — envisioning and developing the next-generation of user interactions01, interfaces02, and experiences03. More &amp;#x2197; -- MIT
 MIT Media Lab ETH Zürich
 Priceline.com
 Credit Suisse
 Accenture
 MIT Consulting Group
 Squarespace
--- 01 New Interactions MIT Media Lab / MIT / ETH Zürich -- MIT Media Lab MIT CSAIL MIT Engineering Interactive Technologies ETH Zürich 02 New Interfaces Credit Suisse / MIT / ETH Zürich -- Credit Suisse Priceline.</description></item></channel></rss>
+--  01 New Interactions MIT Media Lab  / MIT  / ETH Zürich  --     MIT Media Lab      MIT CSAIL      MIT Engineering Interactive Technologies      ETH Zürich      02 New Interfaces Credit Suisse  / MIT  / ETH Zürich  --     Credit Suisse      Priceline.</description>
+    </item>
+    
+  </channel>
+</rss>
