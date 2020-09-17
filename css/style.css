@@ -6,7 +6,9 @@ body {
   -webkit-font-smoothings: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  background: rgb(30, 30, 30);  
+  /* background: rgb(30, 30, 30);   */
+  background:  rgba(228,228,228);
+
 }
 
 .bw1 {
@@ -47,16 +49,38 @@ code {
 }
 
 .ks-grey {
-  color:  rgba(255,255,255,.7);
+  color:  rgb(228,228,228);
+}
+
+.ks-blue {
+  color: rgb(60,108,160);
+}
+
+.anchor {
+  /* position: sticky; */
+  /* position: fixed;
+  bottom: 0px;
+  width: 100%;
+  display: block; */
+
+  position: fixed; 
+  width: 100%;
+  right: 0; 
+  bottom: 0; 
+  float: right;
+ -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);  
+  overflow-x: scroll;
+  white-space: nowrap;
 }
 
 a {
-  font-family: ivymode, serif;
-  font-weight: 400;
+  /* font-family: moret, serif; */
+  /* font-weight: 700; */
   font-style: normal;
-  letter-spacing: 0.08rem;
-  color: white;
-  text-decoration: none;
+  letter-spacing: 0.03rem;
+  color: rgb(60,108,160);
+  text-decoration: underline;
   margin-bottom: .25rem;
   /* gold link hover-white ks-serif f4 b */
   opacity: 1;
@@ -88,46 +112,53 @@ a:active {
 
 
 .ks-button {
-  background-color: rgb(42, 54, 69);
+  background-color:  rgb(60,108,160);
   color: white;
   transition: background-color 0.5s ease-in !important;
+  border-color: rgb(60,108,160);
 }
 .ks-button:hover,
 .ks-button:focus {
   background-color:  white;
-  color: rgb(42, 54, 69);
+  color: rgb(60,108,160);
   transition: background-color 1s ease-in !important;
   transition: color 0.5s ease-in !important;
+  border-color: rgb(60,108,160);
 }
 .ks-button:active {
   background-color: white;
-  color: rgb(42, 54, 69);
+  color: rgb(60,108,160);
   transition: background-color 0.5s ease-in !important;
   transition: color 0.5s ease-in !important;
+  border-color: rgb(60,108,160);
+  /* border: none; */
 }
 
 
 .ks-italic {
-  font-family: aktiv-grotesk, serif;
+  font-family: acumin-pro, serif, aktiv-grotesk, serif;
 font-weight: 300;
 }
   .ks-sans-serif {
     /* font-family: stratos, serif; */
-    font-weight: 300;
+
+    /* font-family: acumin-pro-wide, serif; */
+    font-family: aktiv-grotesk, serif;
+
+    font-weight: 400;
     font-style: normal;
     /* color: pink; */
-    color:  rgba(255,255,255,.7);
-    font-family: ivymode, serif;
+    color: rgb(60,108,160);
     
-    letter-spacing: 0.08rem;
+    letter-spacing: 0.03rem;
   }
   
   .ks-serif {
-    font-family: ivymode,serif;
+    font-family: moret,serif;
     /* font-family: lemonde-journal,serif; */
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
-    letter-spacing: 0.08rem;
+    /* letter-spacing: 0.08rem; */
 
     /* text-decoration: underline; */
   }
@@ -135,7 +166,7 @@ font-weight: 300;
   .ks-link {
     margin-bottom: 1px;
     border-bottom-style: solid;
-    letter-spacing: 0.08rem;
+    /* letter-spacing: 0.08rem; */
   }
 
   .ks-italic {
@@ -144,8 +175,8 @@ font-weight: 300;
 
   .ks-big {
     font-family: bely-display,sans-serif;
-font-weight: 400;
-font-style: normal;
+    font-weight: 700;
+    font-style: normal;
     font-size: 5em;
   }
 
@@ -173,7 +204,8 @@ font-style: normal;
   }
 
   .background-grey {
-    background: rgb(42, 54, 69);
+    /* background: rgb(42, 54, 69); */
+    /* color:  rgba(228,228,228); */
 
     /* background: rgb(40, 50, 59); */
     /* background: rgb(25, 25, 25); */
