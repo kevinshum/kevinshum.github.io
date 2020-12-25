@@ -2,12 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://kevinshum.com/posts/2019/where-are-you-from/</loc>
+    <loc>https://kevinshum.com/posts/pressure-is-a-privilege/</loc>
+    <lastmod>2019-02-15</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevinshum.com/posts/where-are-you-from/</loc>
     <lastmod>2019-07-10</lastmod>
   </url>
   
   <url>
-    <loc>https://kevinshum.com/posts/2019/helloworld/</loc>
+    <loc>https://kevinshum.com/posts/whats-in-a-name/</loc>
+    <lastmod>2019-07-10</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevinshum.com/posts/helloworld/</loc>
     <lastmod>2019-09-15</lastmod>
   </url>
   
@@ -17,7 +27,7 @@
   </url>
   
   <url>
-    <loc>https://kevinshum.com/pages/about/</loc>
+    <loc>https://kevinshum.com/about/</loc>
     <lastmod>2020-10-09</lastmod>
   </url>
   
@@ -37,22 +47,22 @@
   </url>
   
   <url>
+    <loc>https://kevinshum.com/tags/Ghana/</loc>
+    <lastmod>2020-10-09</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kevinshum.com/tags/MIT/</loc>
     <lastmod>2020-10-09</lastmod>
   </url>
   
   <url>
-    <loc>https://kevinshum.com/tags/Study-Abroad/</loc>
+    <loc>https://kevinshum.com/tags/Seattle/</loc>
     <lastmod>2020-10-09</lastmod>
   </url>
   
   <url>
-    <loc>https://kevinshum.com/pages/homes/</loc>
+    <loc>https://kevinshum.com/homes/</loc>
     <lastmod>2020-10-09</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kevinshum.com/pages/contact/</loc>
-    <lastmod>2020-10-17</lastmod>
   </url>
 </urlset>

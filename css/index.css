@@ -8,7 +8,28 @@
   --secondary: #d9dcdd;
   --green: #2d4d25;
   --white: #fff;
+  --ks-serif: ivypresto-text, system-ui, sans-serif;
+  --ks-sans-serif: aktiv-grotesk, serif;
 }
+.ks-grey {
+  color: var(--primary);
+}
+.b--ks-grey {
+  border-color: var(--primary);
+}
+.b--ks-blue {
+  border-color: var(--secondary);
+}
+.ks-blue {
+  color: var(--secondary);
+}
+.ks-grey-bg {
+  background-color: var(--primary);
+}
+.ks-blue-bg {
+  background-color: var(--secondary);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -16,7 +37,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: ivypresto-text, system-ui, sans-serif;
+  /* font-family: ivypresto-text, system-ui, sans-serif; */
   background-color: var(--primary);
 }
 h1,
@@ -31,17 +52,49 @@ p,
 .narrow,
 .tmpl-post li,
 img {
-  max-width: 37.5em; /* 600px /16 */
-  margin-right: auto;
-  margin-left: auto;
+  /* margin-right: auto;
+  margin-left: auto; */
 }
 
 img {
-  display: block;
-  margin-left: auto;
+  margin: 0;
+  padding: 0;
   margin-right: auto;
-  padding-top: 3em;
-  padding-bottom: 3em;
+  margin-left: auto;
+  display: block;
+}
+
+img[src*="full"] {
+  /* https://gomakethings.com/how-to-break-an-image-out-of-its-parent-container-with-css/ */
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: 100vw;
+  position: relative;
+  right: 50%;
+  width: 100vw;
+  /* padding-left: 10em;
+  padding-right: 10em; */
+}
+/* https://www.xaprb.com/blog/how-to-style-images-with-markdown/ */
+img[src*="full"] + em {
+  /* left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: 100vw;
+  position: relative;
+  right: 50%;
+  width: 100vw;
+  padding-left: 15em;
+  padding-right: 15em; */
+
+  padding-top: 1em;
+  color: var(--secondary);
+  font-family: var(--ks-sans-serif);
+  font-style: normal;
+  text-align: left;
+  display: inline-block;
+  font-size: 1rem; /* f5 */
 }
 
 p,
@@ -151,11 +204,11 @@ pre {
   padding: 0;
   list-style: none;
   float: center;
-  margin-left: 1em;
+  /* margin-left: 1em; */
 }
 .nav-item {
   display: inline-block;
-  margin-right: 1em;
+  /* margin-right: 1em; */
 }
 /* .nav-item a[href]:not(:hover) {
   text-decoration: none;
@@ -207,12 +260,13 @@ pre {
   vertical-align: text-bottom;
   text-transform: uppercase;
   font-size: 0.625em; /* 10px /16 */
-  padding-left: 2px;
-  margin: 2px 2px 1px 2px;
+  /* padding-left: 2px; */
+  padding: 3px 8px 3px 8px;
+  margin: 3px 2px 1px 2px;
   /* margin-left: 0.8em; 8px /10 */
-  background-color: var(--primary);
-  color: var(--secondary);
-  border-radius: 0.2em; /* 3px /12 */
+  background-color: var(--secondary);
+  color: var(--primary);
+  /* border-radius: 0.2em; */
   text-decoration: none;
 }
 a[href].post-tag,
@@ -268,9 +322,12 @@ body {
 }
 
 .bw1 {
-  border-width: 0.07rem !important;
+  border-width: 0.1em !important;
 }
 
+.b--ks-blue {
+  border-color: var(--ks-primary);
+}
 code {
   padding: 2px 4px;
   font-size: 90%;
@@ -306,22 +363,6 @@ code {
 
 .normal-spacing {
   letter-spacing: 0;
-}
-
-.ks-grey {
-  color: var(--primary);
-}
-
-.ks-blue {
-  color: var(--secondary);
-}
-
-.ks-grey-bg {
-  background-color: var(--primary);
-}
-
-.ks-blue-bg {
-  background-color: var(--secondary);
 }
 
 .sticky {
@@ -390,16 +431,26 @@ a:active {
   transition: opacity 0.5s ease-out !important;
 }
 
+input,
+input.email {
+  outline: 0 !important;
+  border: none;
+  border-bottom: 2px solid white !important;
+}
+
+.zzz {
+  color: green;
+}
 .ks-button {
   background-color: var(--secondary);
   color: var(--primary);
   transition: background-color 0.5s ease-in !important;
-  border-color: var(--secondary);
+  /* border-color: var(--secondary); */
 }
 .ks-button:hover,
 .ks-button:focus {
   background-color: var(--white);
-  color: var(--secondary);
+  color: var(--primary);
   transition: background-color 1s ease-in !important;
   transition: color 0.5s ease-in !important;
   border-color: var(--secondary);
@@ -426,7 +477,7 @@ a:active {
   font-weight: 400;
   font-style: normal;
   /* color: pink; */
-  color: var(--secondary);
+  /* color: var(--secondary); */
 
   letter-spacing: 0.007em;
 }
@@ -434,7 +485,7 @@ a:active {
 .ks-serif {
   font-family: ivypresto-text, moret, serif;
   /* font-family: lemonde-journal,serif; */
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   /* letter-spacing: 0.08rem; */
 
