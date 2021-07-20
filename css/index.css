@@ -96,6 +96,16 @@ img[src*="full"] + em {
   display: inline-block;
   font-size: 1rem; /* f5 */
 }
+/* https://www.xaprb.com/blog/how-to-style-images-with-markdown/ */
+img + em {
+  padding-top: 1em;
+  color: var(--secondary);
+  font-family: var(--ks-sans-serif);
+  font-style: normal;
+  text-align: left;
+  display: inline-block;
+  font-size: 1rem; /* f5 */
+}
 
 p,
 .tmpl-post li {
@@ -472,7 +482,7 @@ input.email {
   /* font-family: stratos, serif; */
 
   /* font-family: acumin-pro-wide, serif; */
-  font-family: aktiv-grotesk, serif;
+  font-family: usual, aktiv-grotesk, serif;
 
   font-weight: 400;
   font-style: normal;
@@ -483,10 +493,20 @@ input.email {
 }
 
 .ks-serif {
-  font-family: ivypresto-text, moret, serif;
+  font-family: meno-banner, ivypresto-text, moret, serif;
   /* font-family: lemonde-journal,serif; */
   font-weight: 300;
   font-style: normal;
+  letter-spacing: 0.02rem;
+
+  /* text-decoration: underline; */
+}
+
+.ks-serif-bold {
+  font-family: meno-banner, ivypresto-text, moret, serif;
+  /* font-family: lemonde-journal,serif; */
+  font-weight: 900;
+  /* font-style: normal; */
   /* letter-spacing: 0.08rem; */
 
   /* text-decoration: underline; */

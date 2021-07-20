@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kevinshum.com/posts/Eigenverantwortung/</loc>
+    <lastmod>2018-08-28</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kevinshum.com/posts/pressure-is-a-privilege/</loc>
     <lastmod>2019-02-15</lastmod>
   </url>
@@ -47,12 +52,17 @@
   </url>
   
   <url>
-    <loc>https://kevinshum.com/tags/Ghana/</loc>
+    <loc>https://kevinshum.com/tags/MIT/</loc>
     <lastmod>2020-10-09</lastmod>
   </url>
   
   <url>
-    <loc>https://kevinshum.com/tags/MIT/</loc>
+    <loc>https://kevinshum.com/tags/Switzerland/</loc>
+    <lastmod>2020-10-09</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevinshum.com/tags/Ghana/</loc>
     <lastmod>2020-10-09</lastmod>
   </url>
   
