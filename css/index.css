@@ -399,6 +399,11 @@ code {
   white-space: nowrap;
 }
 
+.blur {
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+}
+
 a {
   /* font-family: moret, serif; */
   /* font-weight: 700; */
