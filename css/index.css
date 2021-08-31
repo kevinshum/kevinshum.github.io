@@ -73,8 +73,6 @@ img[src*="full"] {
   position: relative;
   right: 50%;
   width: 100vw;
-  /* padding-left: 10em;
-  padding-right: 10em; */
 }
 /* https://www.xaprb.com/blog/how-to-style-images-with-markdown/ */
 img[src*="full"] + em {
@@ -118,9 +116,9 @@ p,
   color: var(--navy);
   text-decoration-color: var(--white);
 } */
-main {
+/* main {
   padding: 1rem;
-}
+} */
 main :first-child {
   margin-top: 0;
 }
@@ -379,8 +377,6 @@ code {
   position: sticky;
   position: -webkit-sticky; /* Safari */
   top: 0;
-  -webkit-backdrop-filter: blur(7px);
-  backdrop-filter: blur(7px);
   overflow-x: scroll;
   white-space: nowrap;
   border: none;
