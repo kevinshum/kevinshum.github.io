@@ -52,6 +52,11 @@
   </url>
   
   <url>
+    <loc>https://kevinshum.com/tags/2022/</loc>
+    <lastmod>2020-10-09</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kevinshum.com/tags/MIT/</loc>
     <lastmod>2020-10-09</lastmod>
   </url>
@@ -69,5 +74,10 @@
   <url>
     <loc>https://kevinshum.com/tags/Seattle/</loc>
     <lastmod>2020-10-09</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kevinshum.com/posts/2022/001/</loc>
+    <lastmod>2022-01-01</lastmod>
   </url>
 </urlset>
